@@ -1,14 +1,14 @@
 //
-//  SignUpField.swift
+//  FieldWithTitle.swift
 //  PayDay
 //
-//  Created by Vlad Shostak on 08.02.2021.
+//  Created by Vlad Shostak on 09.02.2021.
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
 import UIKit
 
-final class SignUpField: UIView {
+final class FieldWithTitle: UIView {
     
     // MARK: - Public
     
@@ -48,17 +48,29 @@ final class SignUpField: UIView {
 
 // MARK: - ConfigurableView
 
-extension SignUpField: ConfigurableView {
+extension FieldWithTitle: ConfigurableView {
     
     struct Model {
         let title: String
         let placeholder: String
+        let isSecureTextEntry: Bool
         let onValueChange: FieldValueChangeCompletion
+        
+        init(title: String,
+             placeholder: String,
+             isSecureTextEntry: Bool = false,
+             onValueChange: @escaping FieldValueChangeCompletion) {
+            self.title = title
+            self.placeholder = placeholder
+            self.isSecureTextEntry = isSecureTextEntry
+            self.onValueChange = onValueChange
+        }
     }
     
     func configure(model: Model) {
         titleLabel.text = model.title
         textField.placeholder = model.placeholder
+        textField.isSecureTextEntry = model.isSecureTextEntry
         
         onValueChange = model.onValueChange
     }
@@ -67,7 +79,7 @@ extension SignUpField: ConfigurableView {
 
 // MARK: - Private functions
 
-private extension SignUpField {
+private extension FieldWithTitle {
     
     func setupLayout() {
         layoutUsing.stack {
