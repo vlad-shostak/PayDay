@@ -10,8 +10,8 @@ import Foundation
 
 enum UserEndpoint {
     
-    case login(parameters: Parameters)
-    case register(data: Data)
+    case signIn(parameters: Parameters)
+    case signUp(data: Data)
     
 }
 
@@ -29,8 +29,8 @@ extension UserEndpoint: EndpointType {
 
     var path: String {
         switch self {
-        case .login: return "authenticate"
-        case .register: return "customers"
+        case .signIn: return "authenticate"
+        case .signUp: return "customers"
         }
     }
 
@@ -40,13 +40,13 @@ extension UserEndpoint: EndpointType {
 
     var task: HTTPTask {
         switch self {
-        case .login(let parametes):
+        case .signIn(let parametes):
             return .requestParameters(
                 bodyParameters: parametes,
                 bodyEncoding: .jsonEncoding,
                 urlParameters: nil
             )
-        case .register(let data):
+        case .signUp(let data):
             return .requestData(data: data)
         }
     }

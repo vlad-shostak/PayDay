@@ -36,6 +36,7 @@ private extension SignUpAssembly {
         var interactor = SignUpInteractor()
         interactor.userNetworkService = DI.common.userNetworkService
         interactor.userService = DI.common.userService
+        interactor.validationService = DI.common.validationService
         
         return interactor
     }

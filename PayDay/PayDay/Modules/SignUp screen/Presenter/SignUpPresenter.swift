@@ -131,14 +131,14 @@ private extension SignUpPresenter {
     func signUp() {
         guard
             let signUpModel = state.signUpModel,
-            signUpModel.password.count >= Constants.minPasswordLength
+            interactor.validate(password: signUpModel.password) == .success
         else {
             return showErrorAlert(
                 with: "Password should have more than 5 symbols"
             )
         }
         
-        interactor.register(
+        interactor.signUp(
             with: signUpModel
         ) { [weak self] result in
             switch result {
@@ -157,16 +157,6 @@ private extension SignUpPresenter {
             message: message,
             actions: [.ok()]
         )
-    }
-    
-}
-
-// MARK: - Constants
-
-private extension SignUpPresenter {
-    
-    struct Constants {
-        static let minPasswordLength = 6
     }
     
 }

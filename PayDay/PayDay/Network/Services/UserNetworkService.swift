@@ -10,12 +10,12 @@ import Foundation
 
 protocol UserNetworkServiceProtocol: class {
     
-    func login<T: Decodable>(email: String,
+    func signIn<T: Decodable>(email: String,
                              password: String,
                              responseHandler: ResponseHandlerProtocol?,
                              completion: @escaping (Result<T>) -> Void)
     
-    func registerUser<T: Encodable>(with model: T,
+    func signUp<T: Encodable>(with model: T,
                                     email: String,
                                     phone: String,
                                     responseHandler: ResponseHandlerProtocol?,
@@ -41,11 +41,11 @@ final class UserNetworkService {
 
 extension UserNetworkService: UserNetworkServiceProtocol {
     
-    func login<T>(email: String,
+    func signIn<T>(email: String,
                          password: String,
                          responseHandler: ResponseHandlerProtocol?,
                          completion: @escaping (Result<T>) -> Void) where T: Decodable {
-        login(
+        signIn(
             email: email,
             password: password,
             responseHandler: responseHandler ?? ResponseHandler(),
@@ -53,12 +53,12 @@ extension UserNetworkService: UserNetworkServiceProtocol {
         )
     }
 
-    func registerUser<T>(with model: T,
+    func signUp<T>(with model: T,
                          email: String,
                          phone: String,
                          responseHandler: ResponseHandlerProtocol?,
                          completion: @escaping (Result<Int>) -> Void) where T: Encodable {
-        registerUser(
+        signUp(
             with: model,
             email: email,
             phone: phone,
@@ -73,7 +73,7 @@ extension UserNetworkService: UserNetworkServiceProtocol {
 
 private extension UserNetworkService {
     
-    func login<T>(email: String,
+    func signIn<T>(email: String,
                   password: String,
                   responseHandler: ResponseHandlerProtocol,
                   completion: @escaping (Result<T>) -> Void) where T: Decodable {
@@ -83,7 +83,7 @@ private extension UserNetworkService {
             Router<UserEndpoint>.self
         )?
             .request(
-                .login(parameters: parameters)
+                .signIn(parameters: parameters)
         ) { (data, response, error) in
             let result = responseHandler.handleResponse(
                 T.self,
@@ -96,7 +96,7 @@ private extension UserNetworkService {
         }
     }
     
-    func registerUser<T>(with model: T,
+    func signUp<T>(with model: T,
                          email: String,
                          phone: String,
                          responseHandler: ResponseHandlerProtocol,
@@ -120,7 +120,7 @@ private extension UserNetworkService {
 
         dispatchGroup.notify(queue: .main) {
             if !isEmailExisting, !isPhoneExisting {
-                self.registerUser(
+                self.signUpUser(
                     with: model,
                     responseHandler: responseHandler,
                     completion: completion
@@ -134,7 +134,7 @@ private extension UserNetworkService {
         }
     }
 
-    func registerUser<T>(with model: T,
+    func signUpUser<T>(with model: T,
                          responseHandler: ResponseHandlerProtocol,
                          completion: @escaping (Result<Int>) -> Void)  where T: Encodable {
         guard let data = try? JSONEncoder().encode(model) else {
@@ -145,7 +145,7 @@ private extension UserNetworkService {
             Router<UserEndpoint>.self
             )?
             .request(
-                .register(data: data)
+                .signUp(data: data)
             ) { (responseData, _, error) in
             if let errorMessage = error?.localizedDescription {
                 return completion(.failure(errorMessage))

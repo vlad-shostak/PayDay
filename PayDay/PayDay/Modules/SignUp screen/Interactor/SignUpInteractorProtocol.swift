@@ -10,6 +10,7 @@ import Foundation
 
 protocol SignUpInteractorProtocol {
     
-    func register(with model: SignUpModel, completion: @escaping (Result<Int>) -> Void)
+    func signUp(with model: SignUpModel, completion: @escaping (Result<Int>) -> Void)
+    func validate(password: String) -> ValidationResult
     
 }

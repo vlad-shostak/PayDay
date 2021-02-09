@@ -6,8 +6,6 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
-import Foundation
-
 final class SignUpRouter {
     
     // MARK: - Private variables

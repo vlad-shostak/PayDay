@@ -14,6 +14,7 @@ struct SignUpInteractor {
     
     var userNetworkService: UserNetworkServiceProtocol!
     var userService: UserServiceProtocol!
+    var validationService: ValidationServiceProtocol!
     
 }
 
@@ -22,14 +23,14 @@ struct SignUpInteractor {
 
 extension SignUpInteractor: SignUpInteractorProtocol {
     
-    func register(with model: SignUpModel, completion: @escaping (Result<Int>) -> Void) {
+    func signUp(with model: SignUpModel, completion: @escaping (Result<Int>) -> Void) {
         guard isValid(model: model) else {
             return completion(
                 .failure("Please fullfill all the required fields")
             )
         }
         
-        userNetworkService.registerUser(
+        userNetworkService.signUp(
             with: model,
             email: model.email,
             phone: model.phoneNumber,
@@ -43,6 +44,10 @@ extension SignUpInteractor: SignUpInteractorProtocol {
                 completion(result)
             }
         }
+    }
+    
+    func validate(password: String) -> ValidationResult {
+        validationService.isValid(password: password)
     }
     
 }
