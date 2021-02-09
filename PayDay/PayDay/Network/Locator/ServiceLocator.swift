@@ -50,7 +50,7 @@ extension ServiceLocator: ServiceLocatorProtocol {
 private extension ServiceLocator {
     
     func registerRouters() {
-        serviceCache["\(Router<UserEndPoint>.self)"] = Router<UserEndPoint>()
+        serviceCache["\(Router<UserEndpoint>.self)"] = Router<UserEndpoint>()
         serviceCache["\(Router<TransactionsEndpoint>.self)"] = Router<TransactionsEndpoint>()
         serviceCache["\(Router<CustomersEndpoint>.self)"] = Router<CustomersEndpoint>()
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum UserEndPoint {
+enum UserEndpoint {
     
     case login(parameters: Parameters)
     case register(data: Data)
@@ -17,7 +17,7 @@ enum UserEndPoint {
 
 // MARK: - EndpointType
 
-extension UserEndPoint: EndpointType {
+extension UserEndpoint: EndpointType {
 
     var baseURL: URL {
         guard let url = URL(string: NetworkHelper.environmentBaseURL) else {
