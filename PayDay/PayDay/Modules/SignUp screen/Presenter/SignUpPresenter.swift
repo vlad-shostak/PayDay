@@ -38,8 +38,8 @@ extension SignUpPresenter: LifecycleListener {
 
 private extension SignUpPresenter {
     
-    var firstNameModel: SignUpField.Model {
-        SignUpField.Model(
+    var firstNameModel: FieldWithTitle.Model {
+        FieldWithTitle.Model(
             title: "First name",
             placeholder: "Enter your first name"
         ) { [weak self] firstName in
@@ -47,8 +47,8 @@ private extension SignUpPresenter {
         }
     }
     
-    var lastNameModel: SignUpField.Model {
-        SignUpField.Model(
+    var lastNameModel: FieldWithTitle.Model {
+        FieldWithTitle.Model(
             title: "Last name",
             placeholder: "Enter your last name"
         ) { [weak self] lastName in
@@ -56,8 +56,8 @@ private extension SignUpPresenter {
         }
     }
     
-    var phoneNumberModel: SignUpField.Model {
-        SignUpField.Model(
+    var phoneNumberModel: FieldWithTitle.Model {
+        FieldWithTitle.Model(
             title: "Phone number",
             placeholder: "Enter your phone number"
         ) { [weak self] phoneNumber in
@@ -65,8 +65,8 @@ private extension SignUpPresenter {
         }
     }
     
-    var emailModel: SignUpField.Model {
-        SignUpField.Model(
+    var emailModel: FieldWithTitle.Model {
+        FieldWithTitle.Model(
             title: "Email",
             placeholder: "Enter your email"
         ) { [weak self] email in
@@ -74,8 +74,8 @@ private extension SignUpPresenter {
         }
     }
     
-    var passwordModel: SignUpField.Model {
-        SignUpField.Model(
+    var passwordModel: FieldWithTitle.Model {
+        FieldWithTitle.Model(
             title: "Password",
             placeholder: "Enter your password"
         ) { [weak self] password in
@@ -100,16 +100,20 @@ private extension SignUpPresenter {
         }
     }
     
-    var signUpButtonModel: SignUpScreen.Model.ButtonModel {
-        (title: "Sign Up", onTap: { [weak self] in
+    var signUpButtonModel: BaseButtonModel {
+        BaseButtonModel(
+            title: "Sign Up"
+        ) { [weak self] in
             self?.signUp()
-        })
+        }
     }
     
-    var signInButtonModel: SignUpScreen.Model.ButtonModel {
-        (title: "Sign In", onTap: { [weak self] in
+    var signInButtonModel: BaseButtonModel {
+        BaseButtonModel(
+            title: "Sign In"
+        ) { [weak self] in
             self?.router.routeToSignIn()
-        })
+        }
     }
     
     var screenModel: SignUpScreen.Model {
@@ -123,7 +127,7 @@ private extension SignUpPresenter {
                 .segmentedControl(model: genderModel),
                 .dateView(model: dateViewModel),
                 .button(model: signUpButtonModel),
-                .button(model: signInButtonModel),
+                .button(model: signInButtonModel)
             ]
         )
     }

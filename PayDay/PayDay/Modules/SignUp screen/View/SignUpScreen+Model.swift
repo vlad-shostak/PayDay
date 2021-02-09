@@ -10,13 +10,11 @@ extension SignUpScreen {
     
     struct Model {
         
-        typealias ButtonModel = (title: String, onTap: () -> Void)
-        
         enum SubviewRepresentation {
-            case field(model: SignUpField.Model)
+            case field(model: FieldWithTitle.Model)
             case segmentedControl(model: SignUpSegmentedControl.Model)
             case dateView(model: SignUpDateView.Model)
-            case button(model: ButtonModel)
+            case button(model: BaseButtonModel)
         }
         
         let subviewRepresentations: [SubviewRepresentation]

@@ -14,7 +14,11 @@ final class SignUpAssembly {
         let view = SignUpScreen()
         let presenter = SignUpPresenter()
         let interactor = makeInteractor()
-        let router = SignUpRouter(view: view)
+        
+        let router = SignUpRouter(
+            view: view,
+            routingService: DI.common.routingService
+        )
         
         presenter.view = view
         presenter.interactor = interactor

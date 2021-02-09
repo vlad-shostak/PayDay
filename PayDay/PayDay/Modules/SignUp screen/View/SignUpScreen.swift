@@ -40,7 +40,7 @@ extension SignUpScreen: SignUpScreenInput {
             switch $0 {
             case .field(let model):
                 stackView.addArrangedSubview(
-                    SignUpField().configured(with: model)
+                    FieldWithTitle().configured(with: model)
                 )
             case .segmentedControl(let model):
                 stackView.addArrangedSubview(

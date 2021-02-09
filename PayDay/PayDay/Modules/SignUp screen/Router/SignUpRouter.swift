@@ -12,10 +12,13 @@ final class SignUpRouter {
     
     private weak var view: BaseScreen?
     
+    private let routingService: RoutingServiceProtocol
+    
     // MARK: - Initialization
     
-    init(view: BaseScreen) {
+    init(view: BaseScreen, routingService: RoutingServiceProtocol) {
         self.view = view
+        self.routingService = routingService
     }
     
 }
@@ -25,7 +28,9 @@ final class SignUpRouter {
 extension SignUpRouter: SignUpRouterProtocol {
     
     func routeToSignIn() {
-        print("routeToSignIn")
+        routingService.setRootViewController(
+            SignInAssembly.buildModule()
+        )
     }
     
     func routeToTransactions() {
