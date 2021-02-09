@@ -10,6 +10,7 @@ protocol DIProtocol {
     
     var userNetworkService: UserNetworkServiceProtocol { get }
     var userService: UserServiceProtocol { get }
+    var validationService: ValidationServiceProtocol { get }
     
 }
 
@@ -30,6 +31,12 @@ extension DI: DIProtocol {
     var userService: UserServiceProtocol {
         stored(by: #function) {
             UserService()
+        }
+    }
+    
+    var validationService: ValidationServiceProtocol {
+        stored(by: #function) {
+            ValidationService()
         }
     }
     
