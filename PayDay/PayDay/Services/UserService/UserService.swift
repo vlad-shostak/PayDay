@@ -8,17 +8,11 @@
 
 import Foundation
 
-final class UserService {
+struct UserService {
     
     // MARK: - Private variables
 
-    private var shared: UserDefaults
-    
-    // MARK: - Initialization
-
-    init(userDefaults: UserDefaults) {
-        shared = UserDefaults.standard
-    }
+    private let storage = UserDefaults.standard
 
 }
 
@@ -27,20 +21,20 @@ final class UserService {
 extension UserService: UserServiceProtocol {
     
     func saveUser(_ user: UserModel) {
-        shared.set(true, forKey: UserServiceKeys.isLoggedIn)
-        shared.set(user.id, forKey: UserServiceKeys.userId)
+        storage.set(true, forKey: UserServiceKeys.isLoggedIn)
+        storage.set(user.id, forKey: UserServiceKeys.userId)
     }
     
     func set(value: Any, for key: String) {
-        shared.set(value, forKey: key)
+        storage.set(value, forKey: key)
     }
     
     func get(for key: String) -> Any? {
-        shared.value(forKey: key)
+        storage.value(forKey: key)
     }
     
     func removeAll() {
-        shared.set(false, forKey: UserServiceKeys.isLoggedIn)
+        storage.set(false, forKey: UserServiceKeys.isLoggedIn)
     }
     
 }
