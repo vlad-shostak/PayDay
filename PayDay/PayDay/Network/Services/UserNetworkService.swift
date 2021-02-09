@@ -16,10 +16,10 @@ protocol UserNetworkServiceProtocol: class {
                              completion: @escaping (Result<T>) -> Void)
     
     func signUp<T: Encodable>(with model: T,
-                                    email: String,
-                                    phone: String,
-                                    responseHandler: ResponseHandlerProtocol?,
-                                    completion: @escaping (Result<Int>) -> Void)
+                              email: String,
+                              phone: String,
+                              responseHandler: ResponseHandlerProtocol?,
+                              completion: @escaping (Result<Int>) -> Void)
     
 }
 

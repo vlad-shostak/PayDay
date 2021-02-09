@@ -20,7 +20,7 @@ struct UserModel: Codable {
     let phone: String
 
     private enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
         case firstName = "First Name"
         case lastName = "Last Name"
         case gender
