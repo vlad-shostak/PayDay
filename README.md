@@ -4,6 +4,14 @@
 - Language: Swift 5
 - Design pattern: VIPER
 
+## Diagrams
+#### App desing pattern:
+![](Diagrams/app_design_pattern.png)
+#### Sign in:
+![](Diagrams/sign_in.png)
+#### Sign up:
+![](Diagrams/sign_up.png)
+
 ## Questions
 - I spent two days on the task. Due to lack of time, the design is badly implemented, there are small amount of validations, and a few notoriously bad quick fixes.
 - SwiftUI is a cool thing. I tried to show a few tricks from there, such as creating layout using stack and builders, or using decorators for UIView. 
