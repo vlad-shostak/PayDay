@@ -6,11 +6,14 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
+import UIKit
+
 protocol DIProtocol {
     
     var userNetworkService: UserNetworkServiceProtocol { get }
     var userService: UserServiceProtocol { get }
     var validationService: ValidationServiceProtocol { get }
+    var routingService: RoutingServiceProtocol { get }
     
 }
 
@@ -37,6 +40,15 @@ extension DI: DIProtocol {
     var validationService: ValidationServiceProtocol {
         stored(by: #function) {
             ValidationService()
+        }
+    }
+    
+    var routingService: RoutingServiceProtocol {
+        stored(by: #function) {
+            RoutingService(
+                delegate: (UIApplication.shared.delegate as? AppDelegate)?
+                    .appDelegates.first as? LaunchAppDelegate // temporary workaround
+            )
         }
     }
     

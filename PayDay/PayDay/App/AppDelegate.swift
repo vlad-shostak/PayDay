@@ -13,7 +13,7 @@ class AppDelegate: UIResponder {
     
     // MARK: - Private variables
     
-    private let appDelegates: [UIApplicationDelegate] = {
+    private(set) var appDelegates: [UIApplicationDelegate] = {
         [
             LaunchAppDelegate()
         ]
