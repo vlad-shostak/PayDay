@@ -2,7 +2,7 @@
 
 - Project name: PayDay
 - Language: Swift 5
-- Design pattern: VIP + Routers
+- Design pattern: VIPER
 
 ## Questions
 - I spent two days on the task. Due to lack of time, the design is badly implemented, there are small amount of validations, and a few notoriously bad quick fixes.
