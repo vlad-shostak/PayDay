@@ -41,24 +41,6 @@ extension AlertViewTrait where Self: UIViewController {
         assert(title != nil || message != nil, "Title and message should not be nil")
         assert(!viewModel.actions.isEmpty, "Actions should not be empty")
         
-        showAlert(viewModel: viewModel)
-    }
-    
-    func showAlert(title: String?,
-                   message: String?,
-                   actions: [AlertViewModel.Action]) {
-        showAlert(
-            viewModel: AlertViewModel(
-                title: title,
-                message: message,
-                actions: actions
-            )
-        )
-    }
-    
-    // MARK: - Private functions
-    
-    private func showDefaultAlert(viewModel: AlertViewModel) {
         guard let hostController = topViewController else { return }
         
         let alert = UIAlertController(
@@ -77,6 +59,20 @@ extension AlertViewTrait where Self: UIViewController {
             hostController.present(alert, animated: true)
         }
     }
+    
+    func showAlert(title: String?,
+                   message: String?,
+                   actions: [AlertViewModel.Action]) {
+        showAlert(
+            viewModel: AlertViewModel(
+                title: title,
+                message: message,
+                actions: actions
+            )
+        )
+    }
+    
+    // MARK: - Private functions
 
     private func configureActionsForAlert(_ alert: UIAlertController,
                                           with actionViewModels: [AlertViewModel.Action]) {
