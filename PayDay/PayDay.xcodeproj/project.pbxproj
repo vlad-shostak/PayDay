@@ -27,7 +27,6 @@
 		2C83214925D1BA51009CF24D /* StackedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83214825D1BA51009CF24D /* StackedLayout.swift */; };
 		2C83214C25D1BB9D009CF24D /* ViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83214B25D1BB9D009CF24D /* ViewDecorator.swift */; };
 		2C83214E25D1BBC3009CF24D /* DecoratableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83214D25D1BBC3009CF24D /* DecoratableView.swift */; };
-		2C83215125D1BCC8009CF24D /* SignUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83215025D1BCC8009CF24D /* SignUpField.swift */; };
 		2C83215325D1BD18009CF24D /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83215225D1BD18009CF24D /* ConfigurableView.swift */; };
 		2C83215525D1BEB8009CF24D /* SignUpSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83215425D1BEB8009CF24D /* SignUpSegmentedControl.swift */; };
 		2C83215825D1C254009CF24D /* ViewDecorator+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83215725D1C254009CF24D /* ViewDecorator+UIStackView.swift */; };
@@ -73,6 +72,23 @@
 		2C8321E525D30E32009CF24D /* AlertModel.ActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321E425D30E32009CF24D /* AlertModel.ActionExtension.swift */; };
 		2C8321E725D318E1009CF24D /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321E625D318E1009CF24D /* UIGestureRecognizerExtensions.swift */; };
 		2C8321E925D31AE7009CF24D /* ViewDecorator+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321E825D31AE7009CF24D /* ViewDecorator+UIButton.swift */; };
+		2C8321F125D31C99009CF24D /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321F025D31C99009CF24D /* SignInScreen.swift */; };
+		2C8321F325D31CB9009CF24D /* SignInScreenOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321F225D31CB9009CF24D /* SignInScreenOutput.swift */; };
+		2C8321F525D31D0E009CF24D /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321F425D31D0E009CF24D /* SignInPresenter.swift */; };
+		2C8321F725D31D1B009CF24D /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321F625D31D1B009CF24D /* SignInInteractor.swift */; };
+		2C8321F925D31D69009CF24D /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321F825D31D69009CF24D /* ValidationService.swift */; };
+		2C8321FD25D31FAB009CF24D /* ValidationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321FC25D31FAB009CF24D /* ValidationConstants.swift */; };
+		2C8321FF25D3203E009CF24D /* ValidationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321FE25D3203E009CF24D /* ValidationServiceProtocol.swift */; };
+		2C83220125D3212C009CF24D /* SignInInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220025D3212C009CF24D /* SignInInteractorProtocol.swift */; };
+		2C83220325D323D2009CF24D /* SignInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220225D323D2009CF24D /* SignInAssembly.swift */; };
+		2C83220525D32433009CF24D /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220425D32433009CF24D /* SignInRouter.swift */; };
+		2C83220725D32452009CF24D /* SignInRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220625D32452009CF24D /* SignInRouterProtocol.swift */; };
+		2C83220925D324F2009CF24D /* SignInScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220825D324F2009CF24D /* SignInScreenInput.swift */; };
+		2C83220C25D32646009CF24D /* FieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220B25D32646009CF24D /* FieldWithTitle.swift */; };
+		2C83220E25D32707009CF24D /* BaseButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220D25D32707009CF24D /* BaseButtonModel.swift */; };
+		2C83221025D3277A009CF24D /* SignInScreen+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220F25D3277A009CF24D /* SignInScreen+Model.swift */; };
+		2C83221225D32A76009CF24D /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221125D32A76009CF24D /* RoutingService.swift */; };
+		2C83221725D335B3009CF24D /* SignInPresenter+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221625D335B3009CF24D /* SignInPresenter+State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,7 +114,6 @@
 		2C83214825D1BA51009CF24D /* StackedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedLayout.swift; sourceTree = "<group>"; };
 		2C83214B25D1BB9D009CF24D /* ViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDecorator.swift; sourceTree = "<group>"; };
 		2C83214D25D1BBC3009CF24D /* DecoratableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratableView.swift; sourceTree = "<group>"; };
-		2C83215025D1BCC8009CF24D /* SignUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpField.swift; sourceTree = "<group>"; };
 		2C83215225D1BD18009CF24D /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		2C83215425D1BEB8009CF24D /* SignUpSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSegmentedControl.swift; sourceTree = "<group>"; };
 		2C83215725D1C254009CF24D /* ViewDecorator+UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDecorator+UIStackView.swift"; sourceTree = "<group>"; };
@@ -144,6 +159,23 @@
 		2C8321E425D30E32009CF24D /* AlertModel.ActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.ActionExtension.swift; sourceTree = "<group>"; };
 		2C8321E625D318E1009CF24D /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
 		2C8321E825D31AE7009CF24D /* ViewDecorator+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDecorator+UIButton.swift"; sourceTree = "<group>"; };
+		2C8321F025D31C99009CF24D /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		2C8321F225D31CB9009CF24D /* SignInScreenOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenOutput.swift; sourceTree = "<group>"; };
+		2C8321F425D31D0E009CF24D /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		2C8321F625D31D1B009CF24D /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		2C8321F825D31D69009CF24D /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		2C8321FC25D31FAB009CF24D /* ValidationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationConstants.swift; sourceTree = "<group>"; };
+		2C8321FE25D3203E009CF24D /* ValidationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceProtocol.swift; sourceTree = "<group>"; };
+		2C83220025D3212C009CF24D /* SignInInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractorProtocol.swift; sourceTree = "<group>"; };
+		2C83220225D323D2009CF24D /* SignInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAssembly.swift; sourceTree = "<group>"; };
+		2C83220425D32433009CF24D /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		2C83220625D32452009CF24D /* SignInRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouterProtocol.swift; sourceTree = "<group>"; };
+		2C83220825D324F2009CF24D /* SignInScreenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenInput.swift; sourceTree = "<group>"; };
+		2C83220B25D32646009CF24D /* FieldWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldWithTitle.swift; sourceTree = "<group>"; };
+		2C83220D25D32707009CF24D /* BaseButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonModel.swift; sourceTree = "<group>"; };
+		2C83220F25D3277A009CF24D /* SignInScreen+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInScreen+Model.swift"; sourceTree = "<group>"; };
+		2C83221125D32A76009CF24D /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
+		2C83221625D335B3009CF24D /* SignInPresenter+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInPresenter+State.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +258,7 @@
 		2C83211F25D1B32D009CF24D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C8321EA25D31C6D009CF24D /* SignIn screen */,
 				2C83212025D1B35E009CF24D /* SignUp screen */,
 			);
 			path = Modules;
@@ -285,6 +318,7 @@
 		2C83212825D1B3CA009CF24D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2C83220A25D3262E009CF24D /* Views */,
 				2C8321C725D2FEDF009CF24D /* Models */,
 				2C83212E25D1B437009CF24D /* Protocols */,
 				2C83212B25D1B3DB009CF24D /* Screens */,
@@ -360,7 +394,6 @@
 		2C83214F25D1BC9F009CF24D /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				2C83215025D1BCC8009CF24D /* SignUpField.swift */,
 				2C83215425D1BEB8009CF24D /* SignUpSegmentedControl.swift */,
 				2C83216125D1C955009CF24D /* SignUpDateView.swift */,
 			);
@@ -441,6 +474,8 @@
 		2C8321B825D1D9C5009CF24D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2C83221125D32A76009CF24D /* RoutingService.swift */,
+				2C8321FB25D31F9B009CF24D /* Validation */,
 				2C8321CE25D30102009CF24D /* DI */,
 				2C8321C425D2FE80009CF24D /* UserService */,
 				2C8321B925D1D9CB009CF24D /* TransactionsStorage.swift */,
@@ -472,6 +507,7 @@
 			children = (
 				2C8321E325D30E23009CF24D /* AlertModel */,
 				2C8321C825D2FEEF009CF24D /* UserModel.swift */,
+				2C83220D25D32707009CF24D /* BaseButtonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -509,6 +545,82 @@
 				2C8321E425D30E32009CF24D /* AlertModel.ActionExtension.swift */,
 			);
 			path = AlertModel;
+			sourceTree = "<group>";
+		};
+		2C8321EA25D31C6D009CF24D /* SignIn screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321EF25D31C8B009CF24D /* Router */,
+				2C8321EE25D31C84009CF24D /* Assembly */,
+				2C8321ED25D31C80009CF24D /* Interactor */,
+				2C8321EC25D31C7D009CF24D /* Presenter */,
+				2C8321EB25D31C7A009CF24D /* View */,
+			);
+			path = "SignIn screen";
+			sourceTree = "<group>";
+		};
+		2C8321EB25D31C7A009CF24D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321F025D31C99009CF24D /* SignInScreen.swift */,
+				2C8321F225D31CB9009CF24D /* SignInScreenOutput.swift */,
+				2C83220825D324F2009CF24D /* SignInScreenInput.swift */,
+				2C83220F25D3277A009CF24D /* SignInScreen+Model.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8321EC25D31C7D009CF24D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321F425D31D0E009CF24D /* SignInPresenter.swift */,
+				2C83221625D335B3009CF24D /* SignInPresenter+State.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2C8321ED25D31C80009CF24D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321F625D31D1B009CF24D /* SignInInteractor.swift */,
+				2C83220025D3212C009CF24D /* SignInInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2C8321EE25D31C84009CF24D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2C83220225D323D2009CF24D /* SignInAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2C8321EF25D31C8B009CF24D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2C83220425D32433009CF24D /* SignInRouter.swift */,
+				2C83220625D32452009CF24D /* SignInRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2C8321FB25D31F9B009CF24D /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321F825D31D69009CF24D /* ValidationService.swift */,
+				2C8321FC25D31FAB009CF24D /* ValidationConstants.swift */,
+				2C8321FE25D3203E009CF24D /* ValidationServiceProtocol.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		2C83220A25D3262E009CF24D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C83220B25D32646009CF24D /* FieldWithTitle.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,22 +693,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8321FF25D3203E009CF24D /* ValidationServiceProtocol.swift in Sources */,
+				2C83220725D32452009CF24D /* SignInRouterProtocol.swift in Sources */,
 				2C83216625D1CC9F009CF24D /* ViewDecorator+UIView.swift in Sources */,
 				2C8321CB25D2FF3F009CF24D /* UserService.swift in Sources */,
 				2C83216025D1C5B1009CF24D /* SignUpScreenOutput.swift in Sources */,
 				2C8321A825D1D892009CF24D /* URLParameterEncoding.swift in Sources */,
+				2C83220E25D32707009CF24D /* BaseButtonModel.swift in Sources */,
 				2C8321D425D306E7009CF24D /* SignUpPresenter+State.swift in Sources */,
+				2C83220125D3212C009CF24D /* SignInInteractorProtocol.swift in Sources */,
 				2C8321BF25D1DB11009CF24D /* SignUpModel.swift in Sources */,
 				2C83212725D1B39E009CF24D /* SignUpAssembly.swift in Sources */,
 				2C8321B525D1D892009CF24D /* NetworkHelper.swift in Sources */,
 				2C83214C25D1BB9D009CF24D /* ViewDecorator.swift in Sources */,
 				2C8321D225D30120009CF24D /* DIProtocol.swift in Sources */,
 				2C8321E225D30DB3009CF24D /* UIViewControllerExtensions.swift in Sources */,
+				2C83221225D32A76009CF24D /* RoutingService.swift in Sources */,
 				2C8321DB25D308F9009CF24D /* SignUpRouterProtocol.swift in Sources */,
+				2C8321FD25D31FAB009CF24D /* ValidationConstants.swift in Sources */,
 				2C83216225D1C955009CF24D /* SignUpDateView.swift in Sources */,
 				2C8321B325D1D892009CF24D /* ServiceLocator.swift in Sources */,
 				2C83214325D1B8FD009CF24D /* LayoutProperty.swift in Sources */,
 				2C83210625D1AE3F009CF24D /* AppDelegate.swift in Sources */,
+				2C8321F325D31CB9009CF24D /* SignInScreenOutput.swift in Sources */,
 				2C8321BC25D1DA96009CF24D /* SignUpInteractorProtocol.swift in Sources */,
 				2C8321AF25D1D892009CF24D /* EndpointType.swift in Sources */,
 				2C8321AE25D1D892009CF24D /* Router.swift in Sources */,
@@ -607,6 +726,8 @@
 				2C83215C25D1C310009CF24D /* SignUpScreen+Model.swift in Sources */,
 				2C8321D625D30753009CF24D /* Gender.swift in Sources */,
 				2C8321B225D1D892009CF24D /* TransactionsEndpoint.swift in Sources */,
+				2C83220325D323D2009CF24D /* SignInAssembly.swift in Sources */,
+				2C83221725D335B3009CF24D /* SignInPresenter+State.swift in Sources */,
 				2C8321B625D1D892009CF24D /* NetworkLogger.swift in Sources */,
 				2C83215325D1BD18009CF24D /* ConfigurableView.swift in Sources */,
 				2C8321AB25D1D892009CF24D /* UserNetworkService.swift in Sources */,
@@ -615,22 +736,29 @@
 				2C83215E25D1C4DA009CF24D /* UIEdgeInsetsExtensions.swift in Sources */,
 				2C8321A725D1D892009CF24D /* ParameterEncoding.swift in Sources */,
 				2C83214725D1B9D5009CF24D /* Layout+UIView.swift in Sources */,
+				2C83221025D3277A009CF24D /* SignInScreen+Model.swift in Sources */,
 				2C8321BA25D1D9CB009CF24D /* TransactionsStorage.swift in Sources */,
 				2C8321C925D2FEEF009CF24D /* UserModel.swift in Sources */,
+				2C8321F125D31C99009CF24D /* SignInScreen.swift in Sources */,
+				2C8321F925D31D69009CF24D /* ValidationService.swift in Sources */,
 				2C83213025D1B442009CF24D /* LifecycleListener.swift in Sources */,
 				2C8321B025D1D892009CF24D /* AuthenticationEndpoint.swift in Sources */,
 				2C8321A925D1D892009CF24D /* JSONParameterEncoder.swift in Sources */,
 				2C83212D25D1B3E1009CF24D /* BaseScreen.swift in Sources */,
 				2C83213F25D1B893009CF24D /* LayoutDimension.swift in Sources */,
 				2C8321CD25D2FFCC009CF24D /* UserServiceKeys.swift in Sources */,
+				2C83220925D324F2009CF24D /* SignInScreenInput.swift in Sources */,
 				2C83215525D1BEB8009CF24D /* SignUpSegmentedControl.swift in Sources */,
 				2C8321AC25D1D892009CF24D /* HTTPTask.swift in Sources */,
 				2C83215825D1C254009CF24D /* ViewDecorator+UIStackView.swift in Sources */,
 				2C83214525D1B980009CF24D /* LayoutProxy.swift in Sources */,
+				2C8321F725D31D1B009CF24D /* SignInInteractor.swift in Sources */,
+				2C83220C25D32646009CF24D /* FieldWithTitle.swift in Sources */,
 				2C83213425D1B59C009CF24D /* SignUpPresenter.swift in Sources */,
 				2C83214925D1BA51009CF24D /* StackedLayout.swift in Sources */,
 				2C8321E525D30E32009CF24D /* AlertModel.ActionExtension.swift in Sources */,
 				2C83214E25D1BBC3009CF24D /* DecoratableView.swift in Sources */,
+				2C83220525D32433009CF24D /* SignInRouter.swift in Sources */,
 				2C83211E25D1B23F009CF24D /* LaunchAppDelegate.swift in Sources */,
 				2C83213925D1B6E3009CF24D /* UIViewExtensions.swift in Sources */,
 				2C8321B125D1D892009CF24D /* CustomersEndpoint.swift in Sources */,
@@ -638,11 +766,11 @@
 				2C8321C625D2FE89009CF24D /* UserServiceProtocol.swift in Sources */,
 				2C8321E725D318E1009CF24D /* UIGestureRecognizerExtensions.swift in Sources */,
 				2C8321B425D1D892009CF24D /* ResponseHandler.swift in Sources */,
-				2C83215125D1BCC8009CF24D /* SignUpField.swift in Sources */,
 				2C8321E925D31AE7009CF24D /* ViewDecorator+UIButton.swift in Sources */,
 				2C83216425D1CABB009CF24D /* UIStackViewExtensions.swift in Sources */,
 				2C8321AD25D1D892009CF24D /* HTTPMethod.swift in Sources */,
 				2C83213225D1B589009CF24D /* SignUpScreen.swift in Sources */,
+				2C8321F525D31D0E009CF24D /* SignInPresenter.swift in Sources */,
 				2C8321AA25D1D892009CF24D /* TransactionsService.swift in Sources */,
 				2C83215A25D1C2A7009CF24D /* SignUpScreenInput.swift in Sources */,
 			);
