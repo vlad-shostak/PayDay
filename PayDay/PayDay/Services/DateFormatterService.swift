@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DateFormat: String, RawRepresentable {
+enum DateFormat: String {
     
     case general = "yyyy-MM-dd'T'HH:mm:ssZ"
     case transaction = "MMM dd, yyyy"
