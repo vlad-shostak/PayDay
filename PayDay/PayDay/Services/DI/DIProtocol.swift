@@ -14,6 +14,8 @@ protocol DIProtocol {
     var userService: UserServiceProtocol { get }
     var validationService: ValidationServiceProtocol { get }
     var routingService: RoutingServiceProtocol { get }
+    var transactionsStorage: TransactionsStorageProtocol { get }
+    var transactionService: TransactionsServiceProtocol { get }
     
 }
 
@@ -49,6 +51,18 @@ extension DI: DIProtocol {
                 delegate: (UIApplication.shared.delegate as? AppDelegate)?
                     .appDelegates.first as? LaunchAppDelegate // temporary workaround
             )
+        }
+    }
+    
+    var transactionsStorage: TransactionsStorageProtocol {
+        stored(by: #function) {
+            TransactionsStorage()
+        }
+    }
+    
+    var transactionService: TransactionsServiceProtocol {
+        stored(by: #function) {
+            TransactionsService()
         }
     }
     
