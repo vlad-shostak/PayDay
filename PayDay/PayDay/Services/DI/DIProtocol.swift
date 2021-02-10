@@ -10,12 +10,13 @@ import UIKit
 
 protocol DIProtocol {
     
-    var userNetworkService: UserNetworkServiceProtocol { get }
     var userService: UserServiceProtocol { get }
     var validationService: ValidationServiceProtocol { get }
     var routingService: RoutingServiceProtocol { get }
     var transactionsStorage: TransactionsStorageProtocol { get }
-    var transactionService: TransactionsServiceProtocol { get }
+    
+    func userNetworkService(serviceLocator: ServiceLocatorProtocol) -> UserNetworkServiceProtocol
+    func transactionService(serviceLocator: ServiceLocatorProtocol) -> TransactionsServiceProtocol
     
 }
 
@@ -25,12 +26,6 @@ extension DI: DIProtocol {
     
     static var common: DIProtocol {
         shared()
-    }
-    
-    var userNetworkService: UserNetworkServiceProtocol {
-        stored(by: #function) {
-            UserNetworkService()
-        }
     }
     
     var userService: UserServiceProtocol {
@@ -60,9 +55,15 @@ extension DI: DIProtocol {
         }
     }
     
-    var transactionService: TransactionsServiceProtocol {
+    func userNetworkService(serviceLocator: ServiceLocatorProtocol) -> UserNetworkServiceProtocol {
         stored(by: #function) {
-            TransactionsService()
+            UserNetworkService(serviceLocator: serviceLocator)
+        }
+    }
+    
+    func transactionService(serviceLocator: ServiceLocatorProtocol) -> TransactionsServiceProtocol {
+        stored(by: #function) {
+            TransactionsService(serviceLocator: serviceLocator)
         }
     }
     

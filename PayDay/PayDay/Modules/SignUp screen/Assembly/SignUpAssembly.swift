@@ -19,7 +19,7 @@ final class SignUpAssembly {
         )
         
         let interactor = SignUpInteractor(
-            userNetworkService: DI.common.userNetworkService,
+            userNetworkService: DI.common.userNetworkService(serviceLocator: ServiceLocator.sharedInstance),
             userService: DI.common.userService,
             validationService: DI.common.validationService
         )

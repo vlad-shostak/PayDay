@@ -24,8 +24,8 @@ final class TransactionsService {
     
     // MARK: - Initialization
 
-    init(serviceLocator: ServiceLocatorProtocol? = nil) {
-        self.serviceLocator = serviceLocator ?? ServiceLocator.sharedInstance
+    init(serviceLocator: ServiceLocatorProtocol) {
+        self.serviceLocator = serviceLocator
     }
     
 }

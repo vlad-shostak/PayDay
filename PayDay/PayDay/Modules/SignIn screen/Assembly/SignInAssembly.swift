@@ -20,7 +20,7 @@ final class SignInAssembly {
         
         let interactor = SignInInteractor(
             validationService: DI.common.validationService,
-            userNetworkService: DI.common.userNetworkService,
+            userNetworkService: DI.common.userNetworkService(serviceLocator: ServiceLocator.sharedInstance),
             userService: DI.common.userService
         )
         

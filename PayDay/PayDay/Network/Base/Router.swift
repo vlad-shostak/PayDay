@@ -38,8 +38,8 @@ class Router<EndPoint: EndpointType>: NetworkRouterProtocol {
     // MARK: - Public functions
 
     func request(_ route: EndPoint,
-                        urlSession: URLSessionProtocol? = URLSession.shared,
-                        completion: @escaping Completion) {
+                 urlSession: URLSessionProtocol? = URLSession.shared,
+                 completion: @escaping Completion) {
         do {
             let request = try route.buildRequest()
             

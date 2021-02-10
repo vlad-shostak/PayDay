@@ -21,7 +21,7 @@ final class TransactionsAssembly {
         let interactor = TransactionsInteractor(
             userService: DI.common.userService,
             transactionsStorage: DI.common.transactionsStorage,
-            transactionService: DI.common.transactionService
+            transactionService: DI.common.transactionService(serviceLocator: ServiceLocator.sharedInstance)
         )
         
         let presenter = TransactionsPresenter(

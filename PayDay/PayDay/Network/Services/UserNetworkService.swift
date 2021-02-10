@@ -31,8 +31,8 @@ final class UserNetworkService {
     
     // MARK: - Initialization
 
-    init(serviceLocator: ServiceLocatorProtocol? = nil) {
-        self.serviceLocator = serviceLocator ?? ServiceLocator.sharedInstance
+    init(serviceLocator: ServiceLocatorProtocol) {
+        self.serviceLocator = serviceLocator
     }
     
 }
@@ -42,9 +42,9 @@ final class UserNetworkService {
 extension UserNetworkService: UserNetworkServiceProtocol {
     
     func signIn<T>(email: String,
-                         password: String,
-                         responseHandler: ResponseHandlerProtocol?,
-                         completion: @escaping (Result<T>) -> Void) where T: Decodable {
+                   password: String,
+                   responseHandler: ResponseHandlerProtocol?,
+                   completion: @escaping (Result<T>) -> Void) where T: Decodable {
         signIn(
             email: email,
             password: password,
@@ -54,10 +54,10 @@ extension UserNetworkService: UserNetworkServiceProtocol {
     }
 
     func signUp<T>(with model: T,
-                         email: String,
-                         phone: String,
-                         responseHandler: ResponseHandlerProtocol?,
-                         completion: @escaping (Result<Int>) -> Void) where T: Encodable {
+                   email: String,
+                   phone: String,
+                   responseHandler: ResponseHandlerProtocol?,
+                   completion: @escaping (Result<Int>) -> Void) where T: Encodable {
         signUp(
             with: model,
             email: email,
@@ -87,10 +87,10 @@ private extension UserNetworkService {
     }
     
     func signUp<T>(with model: T,
-                         email: String,
-                         phone: String,
-                         responseHandler: ResponseHandlerProtocol,
-                         completion: @escaping (Result<Int>) -> Void) where T: Encodable {
+                   email: String,
+                   phone: String,
+                   responseHandler: ResponseHandlerProtocol,
+                   completion: @escaping (Result<Int>) -> Void) where T: Encodable {
         var isEmailExisting = false
         var isPhoneExisting = false
         
@@ -125,8 +125,8 @@ private extension UserNetworkService {
     }
 
     func signUpUser<T>(with model: T,
-                         responseHandler: ResponseHandlerProtocol,
-                         completion: @escaping (Result<Int>) -> Void)  where T: Encodable {
+                       responseHandler: ResponseHandlerProtocol,
+                       completion: @escaping (Result<Int>) -> Void)  where T: Encodable {
         guard let data = try? JSONEncoder().encode(model) else {
             return completion(.failure("Something went wrong."))
         }
