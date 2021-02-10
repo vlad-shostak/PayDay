@@ -6,6 +6,8 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
+import UIKit
+
 extension SignInScreen {
     
     struct Model {
@@ -13,6 +15,7 @@ extension SignInScreen {
         enum SubviewRepresentation {
             case field(model: FieldWithTitle.Model)
             case button(model: BaseButtonModel)
+            case gap(height: CGFloat)
         }
         
         let subviewRepresentations: [SubviewRepresentation]

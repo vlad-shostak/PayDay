@@ -53,7 +53,9 @@ private extension SignInPresenter {
     var emailModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "Email",
-            placeholder: "Enter your email"
+            placeholder: "Enter your email",
+            textContentType: .emailAddress,
+            keyboardType: .emailAddress
         ) { [weak self] email in
             self?.state.email = email
         }
@@ -63,6 +65,7 @@ private extension SignInPresenter {
         FieldWithTitle.Model(
             title: "Password",
             placeholder: "Enter your password",
+            textContentType: .password,
             isSecureTextEntry: true
         ) { [weak self] password in
             self?.state.password = password
@@ -90,7 +93,9 @@ private extension SignInPresenter {
             subviewRepresentations: [
                 .field(model: emailModel),
                 .field(model: passwordModel),
+                .gap(height: 16),
                 .button(model: signUpButtonModel),
+                .gap(height: 4),
                 .button(model: signInButtonModel)
             ]
         )

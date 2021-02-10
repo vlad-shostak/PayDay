@@ -27,6 +27,7 @@ final class SignInScreen: BaseScreen {
     override func loadView() {
         super.loadView()
         
+        setupNavigationBar()
         setupView()
         setupLayout()
     }
@@ -46,14 +47,18 @@ extension SignInScreen: SignInScreenInput {
                 )
             case let .button(model):
                 let button = UIButton()
+                    .decorated(with: .default)
                     .decorated(with: .title(model.title))
-                    .decorated(with: .titleColor(.black))
                 
                 button.addTapHandler {
                     model.onTap()
                 }
                 
                 stackView.addArrangedSubview(button)
+            case .gap(let height):
+                stackView.addArrangedSubview(
+                    UIView(decorator: .height(height))
+                )
             }
         }
     }
@@ -63,6 +68,10 @@ extension SignInScreen: SignInScreenInput {
 // MARK: - Private functions
 
 private extension SignInScreen {
+    
+    func setupNavigationBar() {
+        title = "Sign In"
+    }
     
     func setupView() {
         view.backgroundColor = .white
@@ -74,7 +83,7 @@ private extension SignInScreen {
                 $0.layout {
                     $0.pin(
                         to: self.view.safeAreaLayoutGuide,
-                        insets: .insets(left: 16, bottom: -16, right: -16)
+                        insets: .insets(top: 16, left: 16, bottom: -16, right: -16)
                     )
                 }
             },
