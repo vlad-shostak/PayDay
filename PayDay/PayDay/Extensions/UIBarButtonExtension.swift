@@ -16,7 +16,7 @@ extension UIBarButtonItem {
     
     // MARK: Entities
 
-    private struct AssociatedKeys {
+    private enum AssociatedKeys {
         static var targetClosure = "UIBarButtonItem.targetClosure"
     }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
-struct UserServiceKeys {
+enum UserServiceKeys {
     
     static let isLoggedIn = "isLoggedIn"
     static let userId = "userId"

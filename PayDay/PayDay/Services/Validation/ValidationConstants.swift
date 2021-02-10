@@ -6,8 +6,6 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
-import Foundation
-
-struct ValidationConstants {
+enum ValidationConstants {
     static let minPasswordLength = 6
 }

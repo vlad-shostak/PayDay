@@ -35,7 +35,7 @@ extension UIGestureRecognizer {
 
 private extension UIGestureRecognizer {
 
-    private struct AssociationKeys {
+    private enum AssociationKeys {
         static var wrappedActions = "wrappedActions"
     }
 

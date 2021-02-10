@@ -91,15 +91,15 @@ extension TransactionsTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let date = model?[section].date else { return nil }
         
-        if DateFormatterService.isTodayDate(date) {
+        if DateFormatterHelper.isTodayDate(date) {
             return "Today"
         }
         
-        if DateFormatterService.isYesterdayDate(date) {
+        if DateFormatterHelper.isYesterdayDate(date) {
             return "Yesterday"
         }
         
-        return DateFormatterService.transactionGroupDateString(from: date)
+        return DateFormatterHelper.transactionGroupDateString(from: date)
     }
     
 }
@@ -121,7 +121,7 @@ private extension TransactionsTableView {
 
 private extension TransactionsTableView {
     
-    struct Constants {
+    enum Constants {
         static let height: CGFloat = 60
     }
     

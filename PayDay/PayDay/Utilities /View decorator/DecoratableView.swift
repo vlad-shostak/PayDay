@@ -70,7 +70,7 @@ private extension DecoratableView {
 
 }
 
-private struct AssociatedKeys {
+private enum AssociatedKeys {
     static var decorator = "AssociatedKeys.decorator"
 }
 

@@ -106,7 +106,7 @@ private extension TransactionsInteractor {
     
     func makeGroupDictionary(from model: [TransactionModel]) -> [Date? : [TransactionModel]] {
         Dictionary(grouping: model) {
-            DateFormatterService.stringToDate(string: $0.date, format: .general).flatMap {
+            DateFormatterHelper.stringToDate(string: $0.date, format: .general).flatMap {
                 let calendar = Calendar.current
                 
                 var date = calendar.dateComponents(
@@ -135,7 +135,7 @@ private extension TransactionsInteractor {
 
 private extension TransactionsInteractor {
     
-    struct Constants {
+    enum Constants {
         static let transactions = "transactions"
     }
     

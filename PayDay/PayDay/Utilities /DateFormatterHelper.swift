@@ -1,5 +1,5 @@
 //
-//  DateFormatterService.swift
+//  DateFormatterHelper.swift
 //  PayDay
 //
 //  Created by Vlad Shostak on 10.02.2021.
@@ -16,7 +16,7 @@ enum DateFormat: String {
     
 }
 
-struct DateFormatterService {
+enum DateFormatterHelper {
     
     static func stringToDate(string: String, format: DateFormat) -> Date? {
         let dateFormatter = DateFormatter()

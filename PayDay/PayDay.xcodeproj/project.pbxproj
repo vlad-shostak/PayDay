@@ -101,7 +101,7 @@
 		2C83223225D3C62E009CF24D /* DailyTransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223125D3C62E009CF24D /* DailyTransactionsModel.swift */; };
 		2C83223425D3C661009CF24D /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223325D3C661009CF24D /* TransactionModel.swift */; };
 		2C83223725D3C6E9009CF24D /* TransactionsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223625D3C6E9009CF24D /* TransactionsStorageProtocol.swift */; };
-		2C83223925D3C8F6009CF24D /* DateFormatterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223825D3C8F6009CF24D /* DateFormatterService.swift */; };
+		2C83223925D3C8F6009CF24D /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223825D3C8F6009CF24D /* DateFormatterHelper.swift */; };
 		2C83223C25D3D95F009CF24D /* UIBarButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */; };
 		2C83224125D3DB5B009CF24D /* TransactionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224025D3DB5B009CF24D /* TransactionsTableView.swift */; };
 		2C83224325D3DDB3009CF24D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224225D3DDB3009CF24D /* DateExtension.swift */; };
@@ -206,7 +206,7 @@
 		2C83223125D3C62E009CF24D /* DailyTransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTransactionsModel.swift; sourceTree = "<group>"; };
 		2C83223325D3C661009CF24D /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		2C83223625D3C6E9009CF24D /* TransactionsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsStorageProtocol.swift; sourceTree = "<group>"; };
-		2C83223825D3C8F6009CF24D /* DateFormatterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterService.swift; sourceTree = "<group>"; };
+		2C83223825D3C8F6009CF24D /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonExtension.swift; sourceTree = "<group>"; };
 		2C83224025D3DB5B009CF24D /* TransactionsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableView.swift; sourceTree = "<group>"; };
 		2C83224225D3DDB3009CF24D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -399,6 +399,7 @@
 		2C83213A25D1B84F009CF24D /* Utilities  */ = {
 			isa = PBXGroup;
 			children = (
+				2C83223825D3C8F6009CF24D /* DateFormatterHelper.swift */,
 				2C83214A25D1BB8D009CF24D /* View decorator */,
 				2C83213B25D1B865009CF24D /* Layout */,
 			);
@@ -519,7 +520,6 @@
 				2C8321FB25D31F9B009CF24D /* Validation */,
 				2C8321CE25D30102009CF24D /* DI */,
 				2C8321C425D2FE80009CF24D /* UserService */,
-				2C83223825D3C8F6009CF24D /* DateFormatterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -842,7 +842,7 @@
 				2C8321DB25D308F9009CF24D /* SignUpRouterProtocol.swift in Sources */,
 				2C8321FD25D31FAB009CF24D /* ValidationConstants.swift in Sources */,
 				2C83216225D1C955009CF24D /* SignUpDateView.swift in Sources */,
-				2C83223925D3C8F6009CF24D /* DateFormatterService.swift in Sources */,
+				2C83223925D3C8F6009CF24D /* DateFormatterHelper.swift in Sources */,
 				2C8321B325D1D892009CF24D /* ServiceLocator.swift in Sources */,
 				2C83214325D1B8FD009CF24D /* LayoutProperty.swift in Sources */,
 				2C83210625D1AE3F009CF24D /* AppDelegate.swift in Sources */,
