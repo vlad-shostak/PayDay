@@ -35,7 +35,7 @@ struct TransactionsInteractor {
 extension TransactionsInteractor: TransactionsInteractorProtocol {
     
     func logout() {
-        userService.removeAll()
+        userService.removeUser()
         transactionsStorage.removeAll()
     }
     
@@ -50,9 +50,7 @@ extension TransactionsInteractor: TransactionsInteractorProtocol {
             return
         }
         
-        guard
-            let userID: Int = userService.get(for: UserServiceKeys.userId)
-        else {
+        guard let userID = userService.userID else {
             return completion(.failure("Something went wrong"))
         }
         

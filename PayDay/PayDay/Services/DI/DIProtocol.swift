@@ -10,6 +10,7 @@ import UIKit
 
 protocol DIProtocol {
     
+    var propertyStorage: PropertyStorageProtocol { get }
     var userService: UserServiceProtocol { get }
     var validationService: ValidationServiceProtocol { get }
     var routingService: RoutingServiceProtocol { get }
@@ -26,6 +27,12 @@ extension DI: DIProtocol {
     
     static var common: DIProtocol {
         shared()
+    }
+    
+    var propertyStorage: PropertyStorageProtocol {
+        stored(by: #function) {
+            PropertyStorage()
+        }
     }
     
     var userService: UserServiceProtocol {

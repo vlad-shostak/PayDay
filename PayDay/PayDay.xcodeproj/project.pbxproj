@@ -59,7 +59,6 @@
 		2C8321C625D2FE89009CF24D /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321C525D2FE89009CF24D /* UserServiceProtocol.swift */; };
 		2C8321C925D2FEEF009CF24D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321C825D2FEEF009CF24D /* UserModel.swift */; };
 		2C8321CB25D2FF3F009CF24D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321CA25D2FF3F009CF24D /* UserService.swift */; };
-		2C8321CD25D2FFCC009CF24D /* UserServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321CC25D2FFCC009CF24D /* UserServiceKeys.swift */; };
 		2C8321D025D30115009CF24D /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321CF25D30115009CF24D /* DI.swift */; };
 		2C8321D225D30120009CF24D /* DIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321D125D30120009CF24D /* DIProtocol.swift */; };
 		2C8321D425D306E7009CF24D /* SignUpPresenter+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8321D325D306E7009CF24D /* SignUpPresenter+State.swift */; };
@@ -107,6 +106,8 @@
 		2C83224325D3DDB3009CF24D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224225D3DDB3009CF24D /* DateExtension.swift */; };
 		2C83224525D3DEBA009CF24D /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224425D3DEBA009CF24D /* TransactionsTableViewCell.swift */; };
 		2C83224A25D3F521009CF24D /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224925D3F521009CF24D /* Screen.swift */; };
+		2CEA711825D431B4008B99FE /* PropertyStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711725D431B4008B99FE /* PropertyStorageProtocol.swift */; };
+		2CEA711A25D431DC008B99FE /* PropertyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711925D431DC008B99FE /* PropertyStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,7 +165,6 @@
 		2C8321C525D2FE89009CF24D /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		2C8321C825D2FEEF009CF24D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2C8321CA25D2FF3F009CF24D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		2C8321CC25D2FFCC009CF24D /* UserServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceKeys.swift; sourceTree = "<group>"; };
 		2C8321CF25D30115009CF24D /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		2C8321D125D30120009CF24D /* DIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIProtocol.swift; sourceTree = "<group>"; };
 		2C8321D325D306E7009CF24D /* SignUpPresenter+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpPresenter+State.swift"; sourceTree = "<group>"; };
@@ -212,6 +212,8 @@
 		2C83224225D3DDB3009CF24D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		2C83224425D3DEBA009CF24D /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		2C83224925D3F521009CF24D /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		2CEA711725D431B4008B99FE /* PropertyStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorageProtocol.swift; sourceTree = "<group>"; };
+		2CEA711925D431DC008B99FE /* PropertyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +517,7 @@
 		2C8321B825D1D9C5009CF24D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2CEA711625D431A2008B99FE /* PropertyStorage */,
 				2C83223525D3C6E0009CF24D /* TransactionsStorage */,
 				2C83221125D32A76009CF24D /* RoutingService.swift */,
 				2C8321FB25D31F9B009CF24D /* Validation */,
@@ -538,7 +541,6 @@
 			children = (
 				2C8321C525D2FE89009CF24D /* UserServiceProtocol.swift */,
 				2C8321CA25D2FF3F009CF24D /* UserService.swift */,
-				2C8321CC25D2FFCC009CF24D /* UserServiceKeys.swift */,
 			);
 			path = UserService;
 			sourceTree = "<group>";
@@ -749,6 +751,15 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		2CEA711625D431A2008B99FE /* PropertyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA711725D431B4008B99FE /* PropertyStorageProtocol.swift */,
+				2CEA711925D431DC008B99FE /* PropertyStorage.swift */,
+			);
+			path = PropertyStorage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -871,6 +882,7 @@
 				2C83224525D3DEBA009CF24D /* TransactionsTableViewCell.swift in Sources */,
 				2C83221025D3277A009CF24D /* SignInScreen+Model.swift in Sources */,
 				2C8321BA25D1D9CB009CF24D /* TransactionsStorage.swift in Sources */,
+				2CEA711825D431B4008B99FE /* PropertyStorageProtocol.swift in Sources */,
 				2C8321C925D2FEEF009CF24D /* UserModel.swift in Sources */,
 				2C8321F125D31C99009CF24D /* SignInScreen.swift in Sources */,
 				2C8321F925D31D69009CF24D /* ValidationService.swift in Sources */,
@@ -882,7 +894,6 @@
 				2C8321A925D1D892009CF24D /* JSONParameterEncoder.swift in Sources */,
 				2C83212D25D1B3E1009CF24D /* BaseScreen.swift in Sources */,
 				2C83213F25D1B893009CF24D /* LayoutDimension.swift in Sources */,
-				2C8321CD25D2FFCC009CF24D /* UserServiceKeys.swift in Sources */,
 				2C83220925D324F2009CF24D /* SignInScreenInput.swift in Sources */,
 				2C83215525D1BEB8009CF24D /* SignUpSegmentedControl.swift in Sources */,
 				2C83223425D3C661009CF24D /* TransactionModel.swift in Sources */,
@@ -892,6 +903,7 @@
 				2C83214525D1B980009CF24D /* LayoutProxy.swift in Sources */,
 				2C8321F725D31D1B009CF24D /* SignInInteractor.swift in Sources */,
 				2C83220C25D32646009CF24D /* FieldWithTitle.swift in Sources */,
+				2CEA711A25D431DC008B99FE /* PropertyStorage.swift in Sources */,
 				2C83213425D1B59C009CF24D /* SignUpPresenter.swift in Sources */,
 				2C83214925D1BA51009CF24D /* StackedLayout.swift in Sources */,
 				2C83224325D3DDB3009CF24D /* DateExtension.swift in Sources */,

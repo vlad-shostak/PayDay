@@ -12,7 +12,7 @@ struct UserService {
     
     // MARK: - Private variables
 
-    private let storage = UserDefaults.standard
+    private let propertyStorage = PropertyStorage()
 
 }
 
@@ -20,21 +20,38 @@ struct UserService {
 
 extension UserService: UserServiceProtocol {
     
+    var isLoggedIn: Bool {
+        propertyStorage.get(forKey: UserServiceKeys.isLoggedIn) ?? false
+    }
+    
+    var userID: Int? {
+        propertyStorage.get(forKey: UserServiceKeys.userId)
+    }
+    
+    func setUserID(_ userID: Int) {
+        propertyStorage.set(userID, forKey: UserServiceKeys.userId)
+    }
+    
     func saveUser(_ user: UserModel) {
-        storage.set(true, forKey: UserServiceKeys.isLoggedIn)
-        storage.set(user.id, forKey: UserServiceKeys.userId)
+        propertyStorage.set(true, forKey: UserServiceKeys.isLoggedIn)
+        propertyStorage.set(user.id, forKey: UserServiceKeys.userId)
     }
     
-    func set(value: Any, for key: String) {
-        storage.set(value, forKey: key)
+    func removeUser() {
+        propertyStorage.set(false, forKey: UserServiceKeys.isLoggedIn)
     }
     
-    func get<T>(for key: String) -> T? {
-        storage.value(forKey: key) as? T
-    }
+}
+
+// MARK: - Keys
+
+private extension UserService {
     
-    func removeAll() {
-        storage.set(false, forKey: UserServiceKeys.isLoggedIn)
+    enum UserServiceKeys {
+        
+        static let isLoggedIn = "isLoggedIn"
+        static let userId = "userId"
+        
     }
     
 }

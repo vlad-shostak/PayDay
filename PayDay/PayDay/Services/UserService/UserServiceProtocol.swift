@@ -10,9 +10,11 @@ import Foundation
 
 protocol UserServiceProtocol {
     
+    var isLoggedIn: Bool { get }
+    var userID: Int? { get }
+    
+    func setUserID(_ userID: Int)
     func saveUser(_ user: UserModel)
-    func set(value: Any, for key: String)
-    func get<T>(for key: String) -> T?
-    func removeAll()
+    func removeUser()
     
 }

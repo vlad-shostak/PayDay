@@ -50,7 +50,7 @@ extension SignUpInteractor: SignUpInteractorProtocol {
         ) { result in
             DispatchQueue.main.async {
                 if case .success(let userId) = result {
-                    self.userService.set(value: userId, for: UserServiceKeys.userId)
+                    self.userService.setUserID(userId)
                 }
                 
                 completion(result)

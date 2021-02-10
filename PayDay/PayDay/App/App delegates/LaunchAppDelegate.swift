@@ -46,7 +46,7 @@ extension LaunchAppDelegate: ApplicationRoutingDelegate {
 private extension LaunchAppDelegate {
     
     func prepareRootView() {
-        let isLoggedIn: Bool = DI.common.userService.get(for: UserServiceKeys.isLoggedIn) ?? false
+        let isLoggedIn: Bool = DI.common.userService.isLoggedIn
         
         let rootViewController = isLoggedIn
             ? TransactionsAssembly.buildModule().embedInNavigationController
