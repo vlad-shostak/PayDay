@@ -10,14 +10,14 @@ import Foundation
 
 typealias Completion = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void
 
-protocol URLSessionProtocol: class {
+protocol URLSessionProtocol: AnyObject {
     
     func dataTask(with request: URLRequest,
                   completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
     
 }
 
-protocol NetworkRouterProtocol: class {
+protocol NetworkRouterProtocol: AnyObject {
     
     associatedtype EndPoint: EndpointType
     

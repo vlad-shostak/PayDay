@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TransactionsServiceProtocol: class {
+protocol TransactionsServiceProtocol: AnyObject {
     
     func getAllTransactions<T: Decodable>(accountId: Int,
                                           responseHandler: ResponseHandlerProtocol?,

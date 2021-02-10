@@ -10,7 +10,7 @@ import Foundation
 
 typealias Request = String
 
-protocol TransactionsStorageProtocol: class {
+protocol TransactionsStorageProtocol: AnyObject {
     
     func get<T: Hashable>(request: Request) -> T?
     @discardableResult func put<T: Hashable>(request: Request, with value: T) -> Bool

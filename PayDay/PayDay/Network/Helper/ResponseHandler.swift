@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ResponseHandlerProtocol: class {
+protocol ResponseHandlerProtocol: AnyObject {
     
     func handleResponse<T: Decodable>(_ modelClass: T.Type,
                                       _ data: Data?,

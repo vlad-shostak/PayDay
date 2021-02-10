@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UserNetworkServiceProtocol: class {
+protocol UserNetworkServiceProtocol: AnyObject {
     
     func signIn<T: Decodable>(email: String,
                              password: String,

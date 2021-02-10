@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ServiceLocatorProtocol: class {
+protocol ServiceLocatorProtocol: AnyObject {
     
     func getRouter<T>(_ routerProtocol: T.Type) -> T?
     
