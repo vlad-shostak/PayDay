@@ -29,8 +29,8 @@ extension UserService: UserServiceProtocol {
         storage.set(value, forKey: key)
     }
     
-    func get(for key: String) -> Any? {
-        storage.value(forKey: key)
+    func get<T>(for key: String) -> T? {
+        storage.value(forKey: key) as? T
     }
     
     func removeAll() {

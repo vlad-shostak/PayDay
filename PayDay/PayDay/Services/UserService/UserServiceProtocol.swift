@@ -12,7 +12,7 @@ protocol UserServiceProtocol {
     
     func saveUser(_ user: UserModel)
     func set(value: Any, for key: String)
-    func get(for key: String) -> Any?
+    func get<T>(for key: String) -> T?
     func removeAll()
     
 }
