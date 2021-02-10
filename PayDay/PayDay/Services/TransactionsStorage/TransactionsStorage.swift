@@ -8,24 +8,11 @@
 
 import Foundation
 
-typealias Request = String
-
-protocol TransactionsStorageProtocol: class {
-    
-    func get<T: Hashable>(request: Request) -> T?
-    @discardableResult func put<T: Hashable>(request: Request, with value: T) -> Bool
-    func clean()
-}
-
 final class TransactionsStorage {
     
     // MARK: - Private functions
 
     private var storage = [String: AnyHashable]()
-    
-    // MARK: - Initialization
-
-    init() {}
     
 }
 
@@ -43,7 +30,7 @@ extension TransactionsStorage: TransactionsStorageProtocol {
         return true
     }
 
-    func clean() {
+    func removeAll() {
         storage.removeAll()
     }
     
