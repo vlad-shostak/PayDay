@@ -12,7 +12,7 @@ protocol TransactionsServiceProtocol: AnyObject {
     
     func getAllTransactions<T: Decodable>(accountId: Int,
                                           responseHandler: ResponseHandlerProtocol?,
-                                          completion: @escaping (Result<[T]>) -> Void)
+                                          completion: @escaping (Result<T>) -> Void)
     
 }
 
@@ -36,7 +36,7 @@ extension TransactionsService: TransactionsServiceProtocol {
     
     func getAllTransactions<T>(accountId: Int,
                                responseHandler: ResponseHandlerProtocol?,
-                               completion: @escaping (Result<[T]>) -> Void) where T: Decodable {
+                               completion: @escaping (Result<T>) -> Void) where T: Decodable {
         getAllTransactions(
             accountId: accountId,
             responseHandler: responseHandler ?? ResponseHandler(),
@@ -52,9 +52,9 @@ private extension TransactionsService {
     
     func getAllTransactions<T>(accountId: Int,
                                responseHandler: ResponseHandlerProtocol,
-                               completion: @escaping (Result<[T]>) -> Void) where T: Decodable {
+                               completion: @escaping (Result<T>) -> Void) where T: Decodable {
         serviceLocator.getRouter(Router<TransactionsEndpoint>.self)?.request(.getTransactions(accountId: accountId)) { (data, response, error) in
-                let result = responseHandler.handleResponse([T].self, data, response, error)
+                let result = responseHandler.handleResponse(T.self, data, response, error)
                 
                 completion(result)
         }

@@ -47,8 +47,13 @@ extension SignInInteractor: SignInInteractorProtocol {
                 responseHandler: nil
             ) { (result: Result<UserModel>) in
                 DispatchQueue.main.async {
-                    if case .success(let userModel) = result {
+                    switch result {
+                    case .success(let userModel):
                         self.userService.saveUser(userModel)
+                        
+                        completion(.success(userModel))
+                    case .failure(let message):
+                        completion(.failure(message))
                     }
                 }
             }

@@ -21,8 +21,8 @@ struct UserModel: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case id
-        case firstName = "First Name"
-        case lastName = "Last Name"
+        case firstName = "first_name"
+        case lastName = "last_name"
         case gender
         case email
         case password

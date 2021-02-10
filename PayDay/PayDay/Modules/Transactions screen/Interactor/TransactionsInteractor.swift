@@ -41,7 +41,9 @@ extension TransactionsInteractor: TransactionsInteractorProtocol {
     
     func obtainTransactions(completion: @escaping (Result<[DailyTransactionsModel]>) -> Void) {
         if let transactions: [TransactionModel] = transactionsStorage.get(request: Constants.transactions), !transactions.isEmpty {
-            let group = groupTransactions(from: transactions)
+            let group = groupTransactions(
+                from: TransactionModels(transactions: transactions)
+            )
             
             DispatchQueue.main.async {
                 completion(.success(group))
@@ -57,12 +59,12 @@ extension TransactionsInteractor: TransactionsInteractorProtocol {
         transactionService.getAllTransactions(
             accountId: userID,
             responseHandler: nil
-        ) { (result: Result<[TransactionModel]>) in
+        ) { (result: Result<TransactionModels>) in
             switch result {
-            case .success(let transactions):
-                self.transactionsStorage.put(request: Constants.transactions, with: transactions)
+            case .success(let models):
+                self.transactionsStorage.put(request: Constants.transactions, with: models)
                 
-                let group = self.groupTransactions(from: transactions)
+                let group = self.groupTransactions(from: models)
                 
                 DispatchQueue.main.async {
                     completion(.success(group))
@@ -81,12 +83,12 @@ extension TransactionsInteractor: TransactionsInteractorProtocol {
 
 private extension TransactionsInteractor {
     
-    func groupTransactions(from model: [TransactionModel]) -> [DailyTransactionsModel] {
-        guard !model.isEmpty else { return [] }
+    func groupTransactions(from model: TransactionModels) -> [DailyTransactionsModel] {
+        guard !model.transactions.isEmpty else { return [] }
         
         var group: [DailyTransactionsModel] = []
         
-        let groupDictionary = makeGroupDictionary(from: model)
+        let groupDictionary = makeGroupDictionary(from: model.transactions)
         
         groupDictionary.forEach { date, transactions in
             guard let date = date else { return }

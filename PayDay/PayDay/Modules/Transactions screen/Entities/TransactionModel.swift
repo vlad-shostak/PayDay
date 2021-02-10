@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct TransactionModels: Hashable, Codable {
+    let transactions: [TransactionModel]
+}
+
 struct TransactionModel: Hashable, Codable {
     
     var id: Int
