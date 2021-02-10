@@ -10,7 +10,9 @@ import UIKit
 
 final class TransactionsScreen: BaseScreen {
     
-    // MARK: - External dependencies
+    // MARK: - Public
+    
+    // MARK: External dependencies
     
     var output: TransactionsScreenOutput!
     

@@ -10,11 +10,23 @@ import Foundation
 
 struct SignInInteractor {
     
-    // MARK: - External dependencies
+    // MARK: - Private
     
-    var validationService: ValidationServiceProtocol!
-    var userNetworkService: UserNetworkServiceProtocol!
-    var userService: UserServiceProtocol!
+    // MARK: External dependencies
+    
+    private let validationService: ValidationServiceProtocol
+    private let userNetworkService: UserNetworkServiceProtocol
+    private let userService: UserServiceProtocol
+    
+    // MARK: - Initialization
+    
+    init(validationService: ValidationServiceProtocol,
+         userNetworkService: UserNetworkServiceProtocol,
+         userService: UserServiceProtocol) {
+        self.validationService = validationService
+        self.userNetworkService = userNetworkService
+        self.userService = userService
+    }
     
 }
 

@@ -8,15 +8,27 @@
 
 final class SignUpPresenter {
     
-    // MARK: - External dependencies
+    // MARK: - Private
     
-    unowned var view: SignUpScreenInput!
-    var interactor: SignUpInteractorProtocol!
-    var router: SignUpRouterProtocol!
+    // MARK: External dependencies
     
-    // MARK: - Private variables
+    private unowned let view: SignUpScreenInput
+    private let interactor: SignUpInteractorProtocol
+    private let router: SignUpRouterProtocol
+    
+    // MARK: Variables
     
     private var state = State(signUpModel: .empty)
+    
+    // MARK: - Initialization
+    
+    init(view: SignUpScreenInput,
+         interactor: SignUpInteractorProtocol,
+         router: SignUpRouterProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
     
 }
 

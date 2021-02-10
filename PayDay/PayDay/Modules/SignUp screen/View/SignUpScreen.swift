@@ -10,7 +10,9 @@ import UIKit
 
 final class SignUpScreen: BaseScreen {
     
-    // MARK: - External dependencies
+    // MARK: - Public
+    
+    // MARK: External dependencies
     
     var output: SignUpScreenOutput!
  

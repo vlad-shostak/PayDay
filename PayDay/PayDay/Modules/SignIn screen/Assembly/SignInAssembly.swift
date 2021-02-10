@@ -12,37 +12,28 @@ final class SignInAssembly {
     
     static func buildModule() -> Screen {
         let view = SignInScreen()
-        let presenter = SignInPresenter()
-        let interactor = makeInteractor()
         
         let router = SignInRouter(
             view: view,
             routingService: DI.common.routingService
         )
         
-        presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
+        let interactor = SignInInteractor(
+            validationService: DI.common.validationService,
+            userNetworkService: DI.common.userNetworkService,
+            userService: DI.common.userService
+        )
+        
+        let presenter = SignInPresenter(
+            view: view,
+            interactor: interactor,
+            router: router
+        )
         
         view.output = presenter
         view.addLifecycleListener(presenter)
         
         return view
-    }
-    
-}
-
-// MARK: - Private functions
-
-private extension SignInAssembly {
-    
-    static func makeInteractor() -> SignInInteractor {
-        var interactor = SignInInteractor()
-        interactor.userNetworkService = DI.common.userNetworkService
-        interactor.userService = DI.common.userService
-        interactor.validationService = DI.common.validationService
-        
-        return interactor
     }
     
 }

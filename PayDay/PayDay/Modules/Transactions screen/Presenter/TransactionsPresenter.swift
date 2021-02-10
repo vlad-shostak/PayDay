@@ -8,11 +8,23 @@
 
 final class TransactionsPresenter {
     
-    // MARK: - External dependencies
+    // MARK: - Private
     
-    unowned var view: TransactionsScreenInput!
-    var interactor: TransactionsInteractorProtocol!
-    var router: TransactionsRouterProtocol!
+    // MARK: External dependencies
+    
+    private unowned let view: TransactionsScreenInput
+    private let interactor: TransactionsInteractorProtocol
+    private let router: TransactionsRouterProtocol
+    
+    // MARK: - Initialization
+    
+    init(view: TransactionsScreenInput,
+         interactor: TransactionsInteractorProtocol,
+         router: TransactionsRouterProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
     
 }
 

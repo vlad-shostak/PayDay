@@ -10,9 +10,23 @@ import Foundation
 
 struct TransactionsInteractor {
     
-    var userService: UserServiceProtocol!
-    var transactionsStorage: TransactionsStorageProtocol!
-    var transactionService: TransactionsServiceProtocol!
+    // MARK: - Private
+    
+    // MARK: External dependencies
+    
+    private let userService: UserServiceProtocol
+    private let transactionsStorage: TransactionsStorageProtocol
+    private let transactionService: TransactionsServiceProtocol
+    
+    // MARK: - Initialization
+    
+    init(userService: UserServiceProtocol,
+         transactionsStorage: TransactionsStorageProtocol,
+         transactionService: TransactionsServiceProtocol) {
+        self.userService = userService
+        self.transactionsStorage = transactionsStorage
+        self.transactionService = transactionService
+    }
     
 }
 

@@ -12,37 +12,28 @@ final class TransactionsAssembly {
     
     static func buildModule() -> Screen {
         let view = TransactionsScreen()
-        let presenter = TransactionsPresenter()
-        let interactor = makeInteractor()
         
         let router = TransactionsRouter(
             view: view,
             routingService: DI.common.routingService
         )
         
-        presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
+        let interactor = TransactionsInteractor(
+            userService: DI.common.userService,
+            transactionsStorage: DI.common.transactionsStorage,
+            transactionService: DI.common.transactionService
+        )
+        
+        let presenter = TransactionsPresenter(
+            view: view,
+            interactor: interactor,
+            router: router
+        )
         
         view.output = presenter
         view.addLifecycleListener(presenter)
         
         return view
-    }
-    
-}
-
-// MARK: - Private functions
-
-private extension TransactionsAssembly {
-    
-    static func makeInteractor() -> TransactionsInteractor {
-        var interactor = TransactionsInteractor()
-        interactor.userService = DI.common.userService
-        interactor.transactionsStorage = DI.common.transactionsStorage
-        interactor.transactionService = DI.common.transactionService
-        
-        return interactor
     }
     
 }
