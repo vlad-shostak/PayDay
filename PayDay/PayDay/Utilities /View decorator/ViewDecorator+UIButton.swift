@@ -22,4 +22,15 @@ extension ViewDecorator where View: UIButton {
         }
     }
     
+    static var `default`: ViewDecorator<View> {
+        let height: CGFloat = 50
+        
+        return ViewDecorator<View> {
+            $0.decorated(with: .titleColor(.white))
+            $0.decorated(with: .filled(.vivid))
+            $0.decorated(with: .height(height))
+            $0.decorated(with: .rounded(radius: height / 3))
+        }
+    }
+    
 }

@@ -50,7 +50,7 @@ private extension LaunchAppDelegate {
         
         let rootViewController = isLoggedIn
             ? TransactionsAssembly.buildModule().embedInNavigationController
-            : SignInAssembly.buildModule()
+            : SignInAssembly.buildModule().embedInNavigationController
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

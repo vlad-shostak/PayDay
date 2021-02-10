@@ -22,9 +22,9 @@ final class FieldWithTitle: UIView {
     
     private let titleLabel = UILabel()
     
-    private let textField = UITextField()
-        .decorated(with: .borderColor(.black))
-        .decorated(with: .borderWidth(1))
+    private let textField = TextFieldWithInsets()
+        .decorated(with: .default)
+        .decorated(with: .textInsets(.insets(top: 8, left: 8, bottom: 8, right: 8)))
     
     // MARK: Variables
     
@@ -54,17 +54,20 @@ extension FieldWithTitle: ConfigurableView {
         let title: String
         let placeholder: String
         let textContentType: UITextContentType?
+        let keyboardType: UIKeyboardType
         let isSecureTextEntry: Bool
         let onValueChange: FieldValueChangeCompletion
         
         init(title: String,
              placeholder: String,
              textContentType: UITextContentType? = nil,
+             keyboardType: UIKeyboardType = .default,
              isSecureTextEntry: Bool = false,
              onValueChange: @escaping FieldValueChangeCompletion) {
             self.title = title
             self.placeholder = placeholder
             self.textContentType = textContentType
+            self.keyboardType = keyboardType
             self.isSecureTextEntry = isSecureTextEntry
             self.onValueChange = onValueChange
         }
@@ -75,6 +78,7 @@ extension FieldWithTitle: ConfigurableView {
         
         textField.placeholder = model.placeholder
         textField.textContentType = model.textContentType
+        textField.keyboardType = model.keyboardType
         textField.isSecureTextEntry = model.isSecureTextEntry
         
         onValueChange = model.onValueChange
@@ -90,13 +94,15 @@ private extension FieldWithTitle {
         layoutUsing.stack {
             $0.vStack(
                 titleLabel,
-                $0.vGap(fixed: 8),
+                $0.vGap(fixed: 4),
                 textField
             )
         }
     }
     
     func setupTextField() {
+        textField.clearButtonMode = .whileEditing
+        
         textField.addTarget(
             self,
             action: #selector(textFieldValueChanged),
@@ -109,6 +115,21 @@ private extension FieldWithTitle {
         guard let text = textField.text else { return }
         
         onValueChange?(text)
+    }
+    
+}
+
+// MARK: - Constants
+
+private extension FieldWithTitle {
+    
+    enum Constants {
+        
+        enum TextField {
+            static let heigth: CGFloat = 50
+            static let cornerRadius = heigth / 3
+        }
+        
     }
     
 }

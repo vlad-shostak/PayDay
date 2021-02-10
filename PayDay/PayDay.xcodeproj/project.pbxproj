@@ -108,6 +108,10 @@
 		2C83224A25D3F521009CF24D /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224925D3F521009CF24D /* Screen.swift */; };
 		2CEA711825D431B4008B99FE /* PropertyStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711725D431B4008B99FE /* PropertyStorageProtocol.swift */; };
 		2CEA711A25D431DC008B99FE /* PropertyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711925D431DC008B99FE /* PropertyStorage.swift */; };
+		2CEA711C25D445E4008B99FE /* TextFieldWithInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711B25D445E4008B99FE /* TextFieldWithInsets.swift */; };
+		2CEA711E25D4467F008B99FE /* ViewDecorator+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711D25D4467F008B99FE /* ViewDecorator+UITextField.swift */; };
+		2CEA712025D44F2D008B99FE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA711F25D44F2D008B99FE /* UIColorExtension.swift */; };
+		2CEA712225D450BC008B99FE /* ViewDecorator+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA712125D450BC008B99FE /* ViewDecorator+UILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +218,10 @@
 		2C83224925D3F521009CF24D /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		2CEA711725D431B4008B99FE /* PropertyStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorageProtocol.swift; sourceTree = "<group>"; };
 		2CEA711925D431DC008B99FE /* PropertyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorage.swift; sourceTree = "<group>"; };
+		2CEA711B25D445E4008B99FE /* TextFieldWithInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithInsets.swift; sourceTree = "<group>"; };
+		2CEA711D25D4467F008B99FE /* ViewDecorator+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDecorator+UITextField.swift"; sourceTree = "<group>"; };
+		2CEA711F25D44F2D008B99FE /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2CEA712125D450BC008B99FE /* ViewDecorator+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDecorator+UILabel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +402,7 @@
 				2C8321E625D318E1009CF24D /* UIGestureRecognizerExtensions.swift */,
 				2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */,
 				2C83224225D3DDB3009CF24D /* DateExtension.swift */,
+				2CEA711F25D44F2D008B99FE /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +439,8 @@
 				2C83215725D1C254009CF24D /* ViewDecorator+UIStackView.swift */,
 				2C83216525D1CC9F009CF24D /* ViewDecorator+UIView.swift */,
 				2C8321E825D31AE7009CF24D /* ViewDecorator+UIButton.swift */,
+				2CEA711D25D4467F008B99FE /* ViewDecorator+UITextField.swift */,
+				2CEA712125D450BC008B99FE /* ViewDecorator+UILabel.swift */,
 			);
 			path = "View decorator";
 			sourceTree = "<group>";
@@ -662,6 +673,7 @@
 			isa = PBXGroup;
 			children = (
 				2C83220B25D32646009CF24D /* FieldWithTitle.swift */,
+				2CEA711B25D445E4008B99FE /* TextFieldWithInsets.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -847,6 +859,7 @@
 				2C83223C25D3D95F009CF24D /* UIBarButtonExtension.swift in Sources */,
 				2C8321B525D1D892009CF24D /* NetworkHelper.swift in Sources */,
 				2C83214C25D1BB9D009CF24D /* ViewDecorator.swift in Sources */,
+				2CEA712025D44F2D008B99FE /* UIColorExtension.swift in Sources */,
 				2C8321D225D30120009CF24D /* DIProtocol.swift in Sources */,
 				2C8321E225D30DB3009CF24D /* UIViewControllerExtensions.swift in Sources */,
 				2C83221225D32A76009CF24D /* RoutingService.swift in Sources */,
@@ -869,6 +882,7 @@
 				2C83215C25D1C310009CF24D /* SignUpScreen+Model.swift in Sources */,
 				2C8321D625D30753009CF24D /* Gender.swift in Sources */,
 				2C8321B225D1D892009CF24D /* TransactionsEndpoint.swift in Sources */,
+				2CEA711C25D445E4008B99FE /* TextFieldWithInsets.swift in Sources */,
 				2C83220325D323D2009CF24D /* SignInAssembly.swift in Sources */,
 				2C83221725D335B3009CF24D /* SignInPresenter+State.swift in Sources */,
 				2C8321B625D1D892009CF24D /* NetworkLogger.swift in Sources */,
@@ -925,7 +939,9 @@
 				2C83222225D3C397009CF24D /* TransactionsScreenInput.swift in Sources */,
 				2C83222025D3C344009CF24D /* TransactionsScreenOutput.swift in Sources */,
 				2C83213225D1B589009CF24D /* SignUpScreen.swift in Sources */,
+				2CEA712225D450BC008B99FE /* ViewDecorator+UILabel.swift in Sources */,
 				2C8321F525D31D0E009CF24D /* SignInPresenter.swift in Sources */,
+				2CEA711E25D4467F008B99FE /* ViewDecorator+UITextField.swift in Sources */,
 				2C8321AA25D1D892009CF24D /* TransactionsService.swift in Sources */,
 				2C83215A25D1C2A7009CF24D /* SignUpScreenInput.swift in Sources */,
 				2C83222B25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift in Sources */,
