@@ -6,4 +6,8 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
-protocol SignUpScreenOutput: AnyObject {}
+protocol SignUpScreenOutput: AnyObject {
+    
+    func didAskToSignIn()
+    
+}

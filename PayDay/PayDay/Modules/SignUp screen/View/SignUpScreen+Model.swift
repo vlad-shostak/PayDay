@@ -6,6 +6,8 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
+import UIKit
+
 extension SignUpScreen {
     
     struct Model {
@@ -15,6 +17,7 @@ extension SignUpScreen {
             case segmentedControl(model: SignUpSegmentedControl.Model)
             case dateView(model: SignUpDateView.Model)
             case button(model: BaseButtonModel)
+            case gap(height: CGFloat)
         }
         
         let subviewRepresentations: [SubviewRepresentation]

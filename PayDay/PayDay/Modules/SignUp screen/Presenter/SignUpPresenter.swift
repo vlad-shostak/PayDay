@@ -34,7 +34,13 @@ final class SignUpPresenter {
 
 // MARK: - SignUpScreenOutput
 
-extension SignUpPresenter: SignUpScreenOutput {}
+extension SignUpPresenter: SignUpScreenOutput {
+    
+    func didAskToSignIn() {
+        router.routeToSignIn()
+    }
+    
+}
 
 // MARK: - LifecycleListener
 
@@ -53,7 +59,8 @@ private extension SignUpPresenter {
     var firstNameModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "First name",
-            placeholder: "Enter your first name"
+            placeholder: "Enter your first name",
+            textContentType: .name
         ) { [weak self] firstName in
             self?.state.signUpModel?.firstName = firstName
         }
@@ -62,7 +69,8 @@ private extension SignUpPresenter {
     var lastNameModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "Last name",
-            placeholder: "Enter your last name"
+            placeholder: "Enter your last name",
+            textContentType: .name
         ) { [weak self] lastName in
             self?.state.signUpModel?.lastName = lastName
         }
@@ -71,7 +79,9 @@ private extension SignUpPresenter {
     var phoneNumberModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "Phone number",
-            placeholder: "Enter your phone number"
+            placeholder: "Enter your phone number",
+            textContentType: .telephoneNumber,
+            keyboardType: .phonePad
         ) { [weak self] phoneNumber in
             self?.state.signUpModel?.phoneNumber = phoneNumber
         }
@@ -80,7 +90,9 @@ private extension SignUpPresenter {
     var emailModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "Email",
-            placeholder: "Enter your email"
+            placeholder: "Enter your email",
+            textContentType: .emailAddress,
+            keyboardType: .emailAddress
         ) { [weak self] email in
             self?.state.signUpModel?.email = email
         }
@@ -89,7 +101,9 @@ private extension SignUpPresenter {
     var passwordModel: FieldWithTitle.Model {
         FieldWithTitle.Model(
             title: "Password",
-            placeholder: "Enter your password"
+            placeholder: "Enter your password",
+            textContentType: .password,
+            isSecureTextEntry: true
         ) { [weak self] password in
             self?.state.signUpModel?.password = password
         }
@@ -120,14 +134,6 @@ private extension SignUpPresenter {
         }
     }
     
-    var signInButtonModel: BaseButtonModel {
-        BaseButtonModel(
-            title: "Sign In"
-        ) { [weak self] in
-            self?.router.routeToSignIn()
-        }
-    }
-    
     var screenModel: SignUpScreen.Model {
         SignUpScreen.Model(
             subviewRepresentations: [
@@ -138,8 +144,8 @@ private extension SignUpPresenter {
                 .field(model: passwordModel),
                 .segmentedControl(model: genderModel),
                 .dateView(model: dateViewModel),
-                .button(model: signUpButtonModel),
-                .button(model: signInButtonModel)
+                .gap(height: 16),
+                .button(model: signUpButtonModel)
             ]
         )
     }

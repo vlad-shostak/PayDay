@@ -29,7 +29,7 @@ extension SignUpRouter: SignUpRouterProtocol {
     
     func routeToSignIn() {
         routingService.setRootViewController(
-            SignInAssembly.buildModule()
+            SignInAssembly.buildModule().embedInNavigationController
         )
     }
     

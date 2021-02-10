@@ -84,18 +84,17 @@ private extension SignUpDateView {
     func setupFieldsStackView() {
         let placeholders = ["DD", "MM", "YY"]
         
-        [UITextField(), UITextField(), UITextField()].enumerated().forEach {
-            $1.placeholder = placeholders[$0]
+        [TextFieldWithInsets(), TextFieldWithInsets(), TextFieldWithInsets()].enumerated().forEach {
+            $1.keyboardType = .decimalPad
+            $1.decorated(with: .default)
+            $1.decorated(with: .placeholder(placeholders[$0]))
+            $1.decorated(with: .alignment(.center))
             
             $1.addTarget(
                 self,
                 action: #selector(textFieldValueChanged),
                 for: .editingChanged
             )
-            
-            $1
-                .decorated(with: .borderColor(.black))
-                .decorated(with: .borderWidth(1))
             
             fieldsStackView.addArrangedSubview($1)
         }
