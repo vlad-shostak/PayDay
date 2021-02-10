@@ -34,7 +34,9 @@ extension SignUpRouter: SignUpRouterProtocol {
     }
     
     func routeToTransactions() {
-        print("routeToTransactions")
+        routingService.setRootViewController(
+            TransactionsAssembly.buildModule().embedInNavigationController
+        )
     }
     
 }

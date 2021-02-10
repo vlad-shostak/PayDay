@@ -6,8 +6,6 @@
 //  Copyright © 2021 Vlad Shostak. All rights reserved.
 //
 
-import Foundation
-
 protocol SignUpInteractorProtocol {
     
     func signUp(with model: SignUpModel, completion: @escaping (Result<Int>) -> Void)

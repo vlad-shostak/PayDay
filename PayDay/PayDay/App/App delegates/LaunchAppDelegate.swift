@@ -34,7 +34,7 @@ extension LaunchAppDelegate: UIApplicationDelegate {
 
 extension LaunchAppDelegate: ApplicationRoutingDelegate {
     
-    func setRootViewController(_ viewController: BaseScreen) {
+    func setRootViewController(_ viewController: Screen) {
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
@@ -46,10 +46,10 @@ extension LaunchAppDelegate: ApplicationRoutingDelegate {
 private extension LaunchAppDelegate {
     
     func prepareRootView() {
-        let isLoggedIn = (DI.common.userService.get(for: UserServiceKeys.isLoggedIn) as? Bool) ?? false
+        let isLoggedIn: Bool = DI.common.userService.get(for: UserServiceKeys.isLoggedIn) ?? false
         
         let rootViewController = isLoggedIn
-            ? BaseScreen()
+            ? TransactionsAssembly.buildModule().embedInNavigationController
             : SignInAssembly.buildModule()
         
         window = UIWindow(frame: UIScreen.main.bounds)

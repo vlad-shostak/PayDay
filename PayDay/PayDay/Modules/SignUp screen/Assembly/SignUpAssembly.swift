@@ -10,7 +10,7 @@ final class SignUpAssembly {
     
     // MARK: - Public functions
     
-    static func buildModule() -> BaseScreen {
+    static func buildModule() -> Screen {
         let view = SignUpScreen()
         let presenter = SignUpPresenter()
         let interactor = makeInteractor()

@@ -89,6 +89,24 @@
 		2C83221025D3277A009CF24D /* SignInScreen+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83220F25D3277A009CF24D /* SignInScreen+Model.swift */; };
 		2C83221225D32A76009CF24D /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221125D32A76009CF24D /* RoutingService.swift */; };
 		2C83221725D335B3009CF24D /* SignInPresenter+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221625D335B3009CF24D /* SignInPresenter+State.swift */; };
+		2C83221E25D3C32B009CF24D /* TransactionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221D25D3C32B009CF24D /* TransactionsScreen.swift */; };
+		2C83222025D3C344009CF24D /* TransactionsScreenOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83221F25D3C344009CF24D /* TransactionsScreenOutput.swift */; };
+		2C83222225D3C397009CF24D /* TransactionsScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222125D3C397009CF24D /* TransactionsScreenInput.swift */; };
+		2C83222425D3C41F009CF24D /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222325D3C41F009CF24D /* TransactionsPresenter.swift */; };
+		2C83222725D3C46A009CF24D /* TransactionsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222625D3C46A009CF24D /* TransactionsRouterProtocol.swift */; };
+		2C83222925D3C480009CF24D /* TransactionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222825D3C47F009CF24D /* TransactionsRouter.swift */; };
+		2C83222B25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222A25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift */; };
+		2C83222D25D3C4C7009CF24D /* TransactionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222C25D3C4C7009CF24D /* TransactionsInteractor.swift */; };
+		2C83222F25D3C4EF009CF24D /* TransactionsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83222E25D3C4EF009CF24D /* TransactionsAssembly.swift */; };
+		2C83223225D3C62E009CF24D /* DailyTransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223125D3C62E009CF24D /* DailyTransactionsModel.swift */; };
+		2C83223425D3C661009CF24D /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223325D3C661009CF24D /* TransactionModel.swift */; };
+		2C83223725D3C6E9009CF24D /* TransactionsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223625D3C6E9009CF24D /* TransactionsStorageProtocol.swift */; };
+		2C83223925D3C8F6009CF24D /* DateFormatterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223825D3C8F6009CF24D /* DateFormatterService.swift */; };
+		2C83223C25D3D95F009CF24D /* UIBarButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */; };
+		2C83224125D3DB5B009CF24D /* TransactionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224025D3DB5B009CF24D /* TransactionsTableView.swift */; };
+		2C83224325D3DDB3009CF24D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224225D3DDB3009CF24D /* DateExtension.swift */; };
+		2C83224525D3DEBA009CF24D /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224425D3DEBA009CF24D /* TransactionsTableViewCell.swift */; };
+		2C83224A25D3F521009CF24D /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83224925D3F521009CF24D /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +194,24 @@
 		2C83220F25D3277A009CF24D /* SignInScreen+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInScreen+Model.swift"; sourceTree = "<group>"; };
 		2C83221125D32A76009CF24D /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
 		2C83221625D335B3009CF24D /* SignInPresenter+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInPresenter+State.swift"; sourceTree = "<group>"; };
+		2C83221D25D3C32B009CF24D /* TransactionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsScreen.swift; sourceTree = "<group>"; };
+		2C83221F25D3C344009CF24D /* TransactionsScreenOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsScreenOutput.swift; sourceTree = "<group>"; };
+		2C83222125D3C397009CF24D /* TransactionsScreenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsScreenInput.swift; sourceTree = "<group>"; };
+		2C83222325D3C41F009CF24D /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		2C83222625D3C46A009CF24D /* TransactionsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRouterProtocol.swift; sourceTree = "<group>"; };
+		2C83222825D3C47F009CF24D /* TransactionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRouter.swift; sourceTree = "<group>"; };
+		2C83222A25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractorProtocol.swift; sourceTree = "<group>"; };
+		2C83222C25D3C4C7009CF24D /* TransactionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractor.swift; sourceTree = "<group>"; };
+		2C83222E25D3C4EF009CF24D /* TransactionsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAssembly.swift; sourceTree = "<group>"; };
+		2C83223125D3C62E009CF24D /* DailyTransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTransactionsModel.swift; sourceTree = "<group>"; };
+		2C83223325D3C661009CF24D /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		2C83223625D3C6E9009CF24D /* TransactionsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsStorageProtocol.swift; sourceTree = "<group>"; };
+		2C83223825D3C8F6009CF24D /* DateFormatterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterService.swift; sourceTree = "<group>"; };
+		2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonExtension.swift; sourceTree = "<group>"; };
+		2C83224025D3DB5B009CF24D /* TransactionsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableView.swift; sourceTree = "<group>"; };
+		2C83224225D3DDB3009CF24D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2C83224425D3DEBA009CF24D /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		2C83224925D3F521009CF24D /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +294,7 @@
 		2C83211F25D1B32D009CF24D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C83221825D3C2F1009CF24D /* Transactions screen */,
 				2C8321EA25D31C6D009CF24D /* SignIn screen */,
 				2C83212025D1B35E009CF24D /* SignUp screen */,
 			);
@@ -340,6 +377,7 @@
 				2C8321DC25D30ACD009CF24D /* Traits */,
 				2C83212F25D1B442009CF24D /* LifecycleListener.swift */,
 				2C83215225D1BD18009CF24D /* ConfigurableView.swift */,
+				2C83224925D3F521009CF24D /* Screen.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -352,6 +390,8 @@
 				2C83216325D1CABB009CF24D /* UIStackViewExtensions.swift */,
 				2C8321E125D30DB3009CF24D /* UIViewControllerExtensions.swift */,
 				2C8321E625D318E1009CF24D /* UIGestureRecognizerExtensions.swift */,
+				2C83223B25D3D95F009CF24D /* UIBarButtonExtension.swift */,
+				2C83224225D3DDB3009CF24D /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,11 +514,12 @@
 		2C8321B825D1D9C5009CF24D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2C83223525D3C6E0009CF24D /* TransactionsStorage */,
 				2C83221125D32A76009CF24D /* RoutingService.swift */,
 				2C8321FB25D31F9B009CF24D /* Validation */,
 				2C8321CE25D30102009CF24D /* DI */,
 				2C8321C425D2FE80009CF24D /* UserService */,
-				2C8321B925D1D9CB009CF24D /* TransactionsStorage.swift */,
+				2C83223825D3C8F6009CF24D /* DateFormatterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -623,6 +664,91 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2C83221825D3C2F1009CF24D /* Transactions screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C83223025D3C61D009CF24D /* Entities */,
+				2C83222525D3C45E009CF24D /* Router */,
+				2C83221C25D3C319009CF24D /* Assembly */,
+				2C83221B25D3C315009CF24D /* Interactor */,
+				2C83221A25D3C312009CF24D /* Presenter */,
+				2C83221925D3C30F009CF24D /* View */,
+			);
+			path = "Transactions screen";
+			sourceTree = "<group>";
+		};
+		2C83221925D3C30F009CF24D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C83223F25D3DB55009CF24D /* Subviews */,
+				2C83221D25D3C32B009CF24D /* TransactionsScreen.swift */,
+				2C83221F25D3C344009CF24D /* TransactionsScreenOutput.swift */,
+				2C83222125D3C397009CF24D /* TransactionsScreenInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C83221A25D3C312009CF24D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2C83222325D3C41F009CF24D /* TransactionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2C83221B25D3C315009CF24D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2C83222A25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift */,
+				2C83222C25D3C4C7009CF24D /* TransactionsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2C83221C25D3C319009CF24D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2C83222E25D3C4EF009CF24D /* TransactionsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2C83222525D3C45E009CF24D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2C83222625D3C46A009CF24D /* TransactionsRouterProtocol.swift */,
+				2C83222825D3C47F009CF24D /* TransactionsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2C83223025D3C61D009CF24D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2C83223125D3C62E009CF24D /* DailyTransactionsModel.swift */,
+				2C83223325D3C661009CF24D /* TransactionModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2C83223525D3C6E0009CF24D /* TransactionsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2C8321B925D1D9CB009CF24D /* TransactionsStorage.swift */,
+				2C83223625D3C6E9009CF24D /* TransactionsStorageProtocol.swift */,
+			);
+			path = TransactionsStorage;
+			sourceTree = "<group>";
+		};
+		2C83223F25D3DB55009CF24D /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				2C83224025D3DB5B009CF24D /* TransactionsTableView.swift */,
+				2C83224425D3DEBA009CF24D /* TransactionsTableViewCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -694,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8321FF25D3203E009CF24D /* ValidationServiceProtocol.swift in Sources */,
+				2C83224125D3DB5B009CF24D /* TransactionsTableView.swift in Sources */,
 				2C83220725D32452009CF24D /* SignInRouterProtocol.swift in Sources */,
 				2C83216625D1CC9F009CF24D /* ViewDecorator+UIView.swift in Sources */,
 				2C8321CB25D2FF3F009CF24D /* UserService.swift in Sources */,
@@ -701,9 +828,12 @@
 				2C8321A825D1D892009CF24D /* URLParameterEncoding.swift in Sources */,
 				2C83220E25D32707009CF24D /* BaseButtonModel.swift in Sources */,
 				2C8321D425D306E7009CF24D /* SignUpPresenter+State.swift in Sources */,
+				2C83222725D3C46A009CF24D /* TransactionsRouterProtocol.swift in Sources */,
 				2C83220125D3212C009CF24D /* SignInInteractorProtocol.swift in Sources */,
 				2C8321BF25D1DB11009CF24D /* SignUpModel.swift in Sources */,
 				2C83212725D1B39E009CF24D /* SignUpAssembly.swift in Sources */,
+				2C83222425D3C41F009CF24D /* TransactionsPresenter.swift in Sources */,
+				2C83223C25D3D95F009CF24D /* UIBarButtonExtension.swift in Sources */,
 				2C8321B525D1D892009CF24D /* NetworkHelper.swift in Sources */,
 				2C83214C25D1BB9D009CF24D /* ViewDecorator.swift in Sources */,
 				2C8321D225D30120009CF24D /* DIProtocol.swift in Sources */,
@@ -712,6 +842,7 @@
 				2C8321DB25D308F9009CF24D /* SignUpRouterProtocol.swift in Sources */,
 				2C8321FD25D31FAB009CF24D /* ValidationConstants.swift in Sources */,
 				2C83216225D1C955009CF24D /* SignUpDateView.swift in Sources */,
+				2C83223925D3C8F6009CF24D /* DateFormatterService.swift in Sources */,
 				2C8321B325D1D892009CF24D /* ServiceLocator.swift in Sources */,
 				2C83214325D1B8FD009CF24D /* LayoutProperty.swift in Sources */,
 				2C83210625D1AE3F009CF24D /* AppDelegate.swift in Sources */,
@@ -721,6 +852,7 @@
 				2C8321AE25D1D892009CF24D /* Router.swift in Sources */,
 				2C83213D25D1B874009CF24D /* LayoutAnchorType.swift in Sources */,
 				2C8321D925D308A1009CF24D /* SignUpRouter.swift in Sources */,
+				2C83221E25D3C32B009CF24D /* TransactionsScreen.swift in Sources */,
 				2C8321D025D30115009CF24D /* DI.swift in Sources */,
 				2C8321DE25D30AD8009CF24D /* AlertViewTrait.swift in Sources */,
 				2C83215C25D1C310009CF24D /* SignUpScreen+Model.swift in Sources */,
@@ -736,12 +868,16 @@
 				2C83215E25D1C4DA009CF24D /* UIEdgeInsetsExtensions.swift in Sources */,
 				2C8321A725D1D892009CF24D /* ParameterEncoding.swift in Sources */,
 				2C83214725D1B9D5009CF24D /* Layout+UIView.swift in Sources */,
+				2C83224525D3DEBA009CF24D /* TransactionsTableViewCell.swift in Sources */,
 				2C83221025D3277A009CF24D /* SignInScreen+Model.swift in Sources */,
 				2C8321BA25D1D9CB009CF24D /* TransactionsStorage.swift in Sources */,
 				2C8321C925D2FEEF009CF24D /* UserModel.swift in Sources */,
 				2C8321F125D31C99009CF24D /* SignInScreen.swift in Sources */,
 				2C8321F925D31D69009CF24D /* ValidationService.swift in Sources */,
 				2C83213025D1B442009CF24D /* LifecycleListener.swift in Sources */,
+				2C83223725D3C6E9009CF24D /* TransactionsStorageProtocol.swift in Sources */,
+				2C83223225D3C62E009CF24D /* DailyTransactionsModel.swift in Sources */,
+				2C83224A25D3F521009CF24D /* Screen.swift in Sources */,
 				2C8321B025D1D892009CF24D /* AuthenticationEndpoint.swift in Sources */,
 				2C8321A925D1D892009CF24D /* JSONParameterEncoder.swift in Sources */,
 				2C83212D25D1B3E1009CF24D /* BaseScreen.swift in Sources */,
@@ -749,6 +885,8 @@
 				2C8321CD25D2FFCC009CF24D /* UserServiceKeys.swift in Sources */,
 				2C83220925D324F2009CF24D /* SignInScreenInput.swift in Sources */,
 				2C83215525D1BEB8009CF24D /* SignUpSegmentedControl.swift in Sources */,
+				2C83223425D3C661009CF24D /* TransactionModel.swift in Sources */,
+				2C83222D25D3C4C7009CF24D /* TransactionsInteractor.swift in Sources */,
 				2C8321AC25D1D892009CF24D /* HTTPTask.swift in Sources */,
 				2C83215825D1C254009CF24D /* ViewDecorator+UIStackView.swift in Sources */,
 				2C83214525D1B980009CF24D /* LayoutProxy.swift in Sources */,
@@ -756,23 +894,29 @@
 				2C83220C25D32646009CF24D /* FieldWithTitle.swift in Sources */,
 				2C83213425D1B59C009CF24D /* SignUpPresenter.swift in Sources */,
 				2C83214925D1BA51009CF24D /* StackedLayout.swift in Sources */,
+				2C83224325D3DDB3009CF24D /* DateExtension.swift in Sources */,
 				2C8321E525D30E32009CF24D /* AlertModel.ActionExtension.swift in Sources */,
 				2C83214E25D1BBC3009CF24D /* DecoratableView.swift in Sources */,
 				2C83220525D32433009CF24D /* SignInRouter.swift in Sources */,
 				2C83211E25D1B23F009CF24D /* LaunchAppDelegate.swift in Sources */,
 				2C83213925D1B6E3009CF24D /* UIViewExtensions.swift in Sources */,
+				2C83222F25D3C4EF009CF24D /* TransactionsAssembly.swift in Sources */,
 				2C8321B125D1D892009CF24D /* CustomersEndpoint.swift in Sources */,
 				2C83214125D1B8CB009CF24D /* LayoutAnchor.swift in Sources */,
 				2C8321C625D2FE89009CF24D /* UserServiceProtocol.swift in Sources */,
 				2C8321E725D318E1009CF24D /* UIGestureRecognizerExtensions.swift in Sources */,
+				2C83222925D3C480009CF24D /* TransactionsRouter.swift in Sources */,
 				2C8321B425D1D892009CF24D /* ResponseHandler.swift in Sources */,
 				2C8321E925D31AE7009CF24D /* ViewDecorator+UIButton.swift in Sources */,
 				2C83216425D1CABB009CF24D /* UIStackViewExtensions.swift in Sources */,
 				2C8321AD25D1D892009CF24D /* HTTPMethod.swift in Sources */,
+				2C83222225D3C397009CF24D /* TransactionsScreenInput.swift in Sources */,
+				2C83222025D3C344009CF24D /* TransactionsScreenOutput.swift in Sources */,
 				2C83213225D1B589009CF24D /* SignUpScreen.swift in Sources */,
 				2C8321F525D31D0E009CF24D /* SignInPresenter.swift in Sources */,
 				2C8321AA25D1D892009CF24D /* TransactionsService.swift in Sources */,
 				2C83215A25D1C2A7009CF24D /* SignUpScreenInput.swift in Sources */,
+				2C83222B25D3C4B2009CF24D /* TransactionsInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

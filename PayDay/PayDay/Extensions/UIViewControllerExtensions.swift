@@ -10,6 +10,10 @@ import UIKit
 
 extension UIViewController {
     
+    var embedInNavigationController: UINavigationController {
+        UINavigationController(rootViewController: self)
+    }
+    
     /// Returns the topmost UIViewController in the UIViewController's hierarhy.
     var topViewController: UIViewController? {
         if isBeingDismissed, let presentingController = presentingViewController {

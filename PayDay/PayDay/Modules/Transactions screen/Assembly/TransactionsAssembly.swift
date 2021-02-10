@@ -10,7 +10,7 @@ final class TransactionsAssembly {
     
     // MARK: - Public functions
     
-    static func buildModule() -> BaseScreen {
+    static func buildModule() -> Screen {
         let view = TransactionsScreen()
         let presenter = TransactionsPresenter()
         let interactor = makeInteractor()

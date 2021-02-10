@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ApplicationRoutingDelegate: AnyObject {
-    func setRootViewController(_ viewController: BaseScreen)
+    func setRootViewController(_ viewController: Screen)
 }
 
 protocol RoutingServiceProtocol: ApplicationRoutingDelegate {}
@@ -32,7 +32,7 @@ final class RoutingService {
 
 extension RoutingService: RoutingServiceProtocol {
     
-    func setRootViewController(_ viewController: BaseScreen) {
+    func setRootViewController(_ viewController: Screen) {
         delegate?.setRootViewController(viewController)
     }
     
