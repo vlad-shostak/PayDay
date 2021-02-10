@@ -53,15 +53,18 @@ extension FieldWithTitle: ConfigurableView {
     struct Model {
         let title: String
         let placeholder: String
+        let textContentType: UITextContentType?
         let isSecureTextEntry: Bool
         let onValueChange: FieldValueChangeCompletion
         
         init(title: String,
              placeholder: String,
+             textContentType: UITextContentType? = nil,
              isSecureTextEntry: Bool = false,
              onValueChange: @escaping FieldValueChangeCompletion) {
             self.title = title
             self.placeholder = placeholder
+            self.textContentType = textContentType
             self.isSecureTextEntry = isSecureTextEntry
             self.onValueChange = onValueChange
         }
@@ -69,7 +72,9 @@ extension FieldWithTitle: ConfigurableView {
     
     func configure(model: Model) {
         titleLabel.text = model.title
+        
         textField.placeholder = model.placeholder
+        textField.textContentType = model.textContentType
         textField.isSecureTextEntry = model.isSecureTextEntry
         
         onValueChange = model.onValueChange

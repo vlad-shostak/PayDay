@@ -70,10 +70,7 @@ extension TransactionsTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: identifier,
-                for: indexPath
-            ) as? Cell,
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell,
             let transactionModel = model?[indexPath.section].transactions[indexPath.row]
         else {
             return UITableViewCell()
