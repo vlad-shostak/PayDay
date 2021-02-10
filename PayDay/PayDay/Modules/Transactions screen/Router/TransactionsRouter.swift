@@ -29,7 +29,7 @@ extension TransactionsRouter: TransactionsRouterProtocol {
     
     func routeToSignIn() {
         routingService.setRootViewController(
-            SignInAssembly.buildModule()
+            SignInAssembly.buildModule().embedInNavigationController
         )
     }
     

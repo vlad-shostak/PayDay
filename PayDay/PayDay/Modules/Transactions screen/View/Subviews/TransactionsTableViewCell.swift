@@ -65,7 +65,7 @@ private extension TransactionsTableViewCell {
                 alignedTo: .center,
                 $0.hGap(fixed: 16),
                 vendorLabel,
-                $0.hGap(fixed: 16),
+                $0.hGap(min: 16),
                 amountLabel,
                 $0.hGap(fixed: 16)
             )

@@ -108,6 +108,7 @@ private extension TransactionsTableView {
     func setupView() {
         delegate = self
         dataSource = self
+        separatorStyle = .none
         
         register(Cell.self, forCellReuseIdentifier: identifier)
     }

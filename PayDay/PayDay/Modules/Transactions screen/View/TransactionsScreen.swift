@@ -53,7 +53,7 @@ private extension TransactionsScreen {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: "Logout",
-            style: .done
+            style: .plain
         ) { [weak self] _ in
             self?.output.didAskToMakeLogout()
         }
