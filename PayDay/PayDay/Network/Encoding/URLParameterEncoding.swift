@@ -17,9 +17,7 @@ struct URLParameterEncoder: ParameterEncoder {
             throw NetworkError.missingURL
         }
 
-        if var urlComponents = URLComponents(
-            url: url,
-            resolvingAgainstBaseURL: false), !parameters.isEmpty {
+        if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false), !parameters.isEmpty {
             urlComponents.queryItems = [URLQueryItem]()
 
             for (key, value) in parameters {

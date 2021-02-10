@@ -24,7 +24,11 @@ extension UIBarButtonItem {
 
     private var targetClosure: UIBarButtonItemTargetClosure? {
         get {
-            guard let closureWrapper = objc_getAssociatedObject(self, &AssociatedKeys.targetClosure) as? ClosureWrapper else { return nil }
+            guard
+                let closureWrapper = objc_getAssociatedObject(self, &AssociatedKeys.targetClosure) as? ClosureWrapper
+            else {
+                return nil
+            }
 
             return closureWrapper.closure
         }

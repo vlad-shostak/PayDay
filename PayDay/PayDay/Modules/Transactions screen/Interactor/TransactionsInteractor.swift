@@ -50,7 +50,9 @@ extension TransactionsInteractor: TransactionsInteractorProtocol {
             return
         }
         
-        guard let userID: Int = userService.get(for: UserServiceKeys.userId) else {
+        guard
+            let userID: Int = userService.get(for: UserServiceKeys.userId)
+        else {
             return completion(.failure("Something went wrong"))
         }
         

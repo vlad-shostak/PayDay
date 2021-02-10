@@ -53,18 +53,8 @@ private extension TransactionsService {
     func getAllTransactions<T>(accountId: Int,
                                responseHandler: ResponseHandlerProtocol,
                                completion: @escaping (Result<[T]>) -> Void) where T: Decodable {
-        serviceLocator.getRouter(
-            Router<TransactionsEndpoint>.self
-        )?
-            .request(
-                .getTransactions(accountId: accountId)
-            ) { (data, response, error) in
-                let result = responseHandler.handleResponse(
-                    [T].self,
-                    data,
-                    response,
-                    error
-                )
+        serviceLocator.getRouter(Router<TransactionsEndpoint>.self)?.request(.getTransactions(accountId: accountId)) { (data, response, error) in
+                let result = responseHandler.handleResponse([T].self, data, response, error)
                 
                 completion(result)
         }

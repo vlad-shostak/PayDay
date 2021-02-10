@@ -17,7 +17,8 @@ enum TransactionsEndpoint {
 extension TransactionsEndpoint: EndpointType {
 
     var baseURL: URL {
-        guard let url = URL(string: NetworkHelper.environmentBaseURL) else { fatalError("baseURL could not be configured.")
+        guard let url = URL(string: NetworkHelper.environmentBaseURL) else {
+            fatalError("baseURL could not be configured.")
         }
         
         return url

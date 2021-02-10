@@ -79,18 +79,8 @@ private extension UserNetworkService {
                   completion: @escaping (Result<T>) -> Void) where T: Decodable {
         let parameters = ["email": email, "password": password]
         
-        serviceLocator.getRouter(
-            Router<UserEndpoint>.self
-        )?
-            .request(
-                .signIn(parameters: parameters)
-        ) { (data, response, error) in
-            let result = responseHandler.handleResponse(
-                T.self,
-                data,
-                response,
-                error
-            )
+        serviceLocator.getRouter(Router<UserEndpoint>.self)?.request(.signIn(parameters: parameters)) { (data, response, error) in
+            let result = responseHandler.handleResponse(T.self, data, response, error)
             
             completion(result)
         }
@@ -141,21 +131,14 @@ private extension UserNetworkService {
             return completion(.failure("Something went wrong."))
         }
 
-        serviceLocator.getRouter(
-            Router<UserEndpoint>.self
-            )?
-            .request(
-                .signUp(data: data)
-            ) { (responseData, _, error) in
+        serviceLocator.getRouter(Router<UserEndpoint>.self)?.request(.signUp(data: data)) { (responseData, _, error) in
             if let errorMessage = error?.localizedDescription {
                 return completion(.failure(errorMessage))
             }
 
             guard
                 let unwrappedData = responseData,
-                let result = try? JSONSerialization.jsonObject(
-                    with: unwrappedData,
-                    options: .mutableContainers) as? [String: AnyObject],
+                let result = try? JSONSerialization.jsonObject(with: unwrappedData, options: .mutableContainers) as? [String: AnyObject],
                 let userId = result["id"] as? Int
             else {
                 return completion(.failure("Something went wrong."))
@@ -166,17 +149,10 @@ private extension UserNetworkService {
     }
 
     func checkEmailExisting(email: String, completion: @escaping (_ isExisting: Bool) -> Void) {
-        serviceLocator.getRouter(
-            Router<CustomersEndpoint>.self
-            )?
-            .request(
-                .checkEmail(email: email)
-            ) { (data, _, _) in
+        serviceLocator.getRouter(Router<CustomersEndpoint>.self)?.request(.checkEmail(email: email)) { (data, _, _) in
             if let data = data,
-               let jsonData = try? JSONSerialization.jsonObject(
-                    with: data,
-                    options: .mutableContainers) as? [AnyObject],
-                !jsonData.isEmpty {
+               let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [AnyObject],
+               !jsonData.isEmpty {
                 return completion(true)
             }
 
@@ -185,20 +161,11 @@ private extension UserNetworkService {
     }
 
     func checkPhoneExisting(phone: String, completion: @escaping (_ isExisting: Bool) -> Void) {
-        serviceLocator.getRouter(
-            Router<CustomersEndpoint>.self
-            )?
-            .request(
-                .checkPhone(phone: phone)
-            ) { (data, _, _) in
+        serviceLocator.getRouter(Router<CustomersEndpoint>.self)?.request(.checkPhone(phone: phone)) { (data, _, _) in
             if let data = data,
-               let jsonData = try? JSONSerialization.jsonObject(
-                with: data,
-                options: .mutableContainers
-                ) as? [AnyObject],
-                !jsonData.isEmpty {
+               let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [AnyObject],
+               !jsonData.isEmpty {
                 return completion(true)
-                
             }
 
             completion(false)
