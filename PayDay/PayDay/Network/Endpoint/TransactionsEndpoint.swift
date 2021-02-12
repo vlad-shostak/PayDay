@@ -41,7 +41,7 @@ extension TransactionsEndpoint: EndpointType {
             return .requestParameters(
                 bodyParameters: nil,
                 bodyEncoding: .urlEncoding,
-                urlParameters: ["accountId": accountId]
+                urlParameters: ["account_id": accountId]
             )
         }
     }
